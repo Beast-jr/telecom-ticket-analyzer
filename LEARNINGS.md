@@ -1,0 +1,7 @@
+# Learnings
+
+## Day 1
+
+- 
+- 
+- 
