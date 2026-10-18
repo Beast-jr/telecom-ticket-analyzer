@@ -7,7 +7,9 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "test:embed": "tsx scripts/test-embed.ts",
-    "test:llm": "tsx scripts/test-llm.ts"
+    "test:llm": "tsx scripts/test-llm.ts",
+    "gen": "tsx scripts/generate-data.ts",
+    "inspect": "tsx scripts/inspect-data.ts"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,227 @@
+[
+  {
+    "id": "TKT-0001",
+    "category": "Billing",
+    "subtopic": "duplicate charge",
+    "priority": "Medium",
+    "description": "my icici card debited twice for ₹599 recharge on 12th oct on redmi note 12 pls refund duplicate payment quickly??",
+    "resolution": "Root cause: Payment gateway session timeout caused duplicate webhook trigger at PG switch. Steps taken: 1) Verified duplicate transaction ID TXN9028148 against MSISDN in billing ledger 2) Initiated automated refund of ₹599 via Razorpay batch reversal reference REV882103 3) Updated prepaid balance validity to 84 days. Outcome: Duplicate debit of ₹599 reversed to customer source account within 48 banking hours.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0002",
+    "category": "Billing",
+    "subtopic": "duplicate charge",
+    "priority": "High",
+    "description": "Two identical debits of ₹1,178 hit our corporate current account yesterday for NovaFiber 999 bill payment. As a small logistics agency in Guwahati, this double deduction creates unnecessary reconciliation headaches in our ledger. Kindly process the reversal to our HDFC account immediately.",
+    "resolution": "Root cause: Concurrent API calls from corporate self-care portal generated duplicate invoice settlement records. Steps taken: 1) Identified redundant transaction record TXN449102 in Oracle BRM 2) Issued credit memo CM-88192 for ₹1,178 3) Executed nodal bank payout via HDFC PG portal ARN 402918239102. Outcome: Duplicate payment of ₹1,178 successfully refunded to customer corporate account and ledger balanced.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0003",
+    "category": "Billing",
+    "subtopic": "duplicate charge",
+    "priority": "Medium",
+    "description": "Yesterday payment gateway was showing pending so I clicked pay again on Nova app, now passbook shows ₹299 debited two times for my Vivo mobile. I am retired pensioner in Indore and cannot afford extra cut from my pension account. Please help me get the money back.",
+    "resolution": "Root cause: User re-attempted transaction prior to gateway callback timeout, settling twin payments. Steps taken: 1) Located orphaned second transaction TXN3381920 in BillDesk settlement file 2) Processed manual debit reversal of ₹299 via SBI PG refund portal under reference REF662910 3) Sent confirmation SMS to customer. Outcome: Excess ₹299 refunded to customer State Bank of India pension account.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0004",
+    "category": "Billing",
+    "subtopic": "duplicate charge",
+    "priority": "Critical",
+    "description": "A double billing glitch charged ₹29,494 twice on 4th November across our six pooled enterprise lines under Nova Enterprise 4999 in Surat, freezing our company credit card credit limit right before payroll. If this unapproved duplicate charge of ₹29,494 is not refunded today, I will file a formal complaint with TRAI and the national consumer forum.",
+    "resolution": "Root cause: Batch processing deadlock in SAP ERP billing engine triggered twin debit orders against corporate auto-debit profile. Steps taken: 1) Purged duplicate batch schedule BATCH_NOV_04 2) Contacted merchant acquirer ICICI to execute immediate fast-track reversal of ₹29,494 via authorization code AUTH99210 3) Restored corporate account credit balance manually. Outcome: ₹29,494 duplicate charge reversed, restoring corporate credit line.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0005",
+    "category": "Billing",
+    "subtopic": "duplicate charge",
+    "priority": "Low",
+    "description": "recharge of ₹199 done two times by mistake in nova app for my sister number, need one recharge amount adjusted or returned thx.",
+    "resolution": "Root cause: Dual authorization processed by UPI app within 5 seconds. Steps taken: 1) Checked voucher queue on IN (Intelligent Network) 2) Revoked unactivated second ₹199 data voucher token 3) Released ₹199 back to originating UPI VPA via NPCI dispute portal ref NPCI402918. Outcome: Duplicate recharge canceled and ₹199 credited back to customer VPA.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0006",
+    "category": "Billing",
+    "subtopic": "unexpected roaming charge",
+    "priority": "Medium",
+    "description": "Why has TeleNova billed me ₹1,420 for domestic roaming during my four-day visit to Bengaluru last weekend? Nova 599 Unlimited clearly states nationwide free roaming across India. I have been using this iPhone 13 line from Kochi without issues until this bill generated on October 18.",
+    "resolution": "Root cause: Visitor Location Register (VLR) mismatch flagged national roaming partner Circle-B as off-network metered usage. Steps taken: 1) Extracted roaming Call Detail Records (CDRs) from Bengaluru MSC switch 2) Re-rated 142 minutes of voice calls from ₹10/min to ₹0/min 3) Issued billing credit adjustment CR-44910 for ₹1,420 plus applicable taxes. Outcome: Erroneous domestic roaming charge of ₹1,420 waived and invoice revised.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0007",
+    "category": "Billing",
+    "subtopic": "unexpected roaming charge",
+    "priority": "High",
+    "description": "Border area cell tower handover triggered ₹3,850 international roaming charges while I was physically standing in Attari, Amritsar. My Samsung Galaxy S22 latched onto a foreign carrier without warning even though international roaming toggle was disabled in settings. Reverse this ridiculous charge before the due date.",
+    "resolution": "Root cause: Signal spillover from foreign border cell tower caused involuntary MCC/MNC network handover. Steps taken: 1) Audited cell tower triangulation logs verifying customer presence in Attari, Punjab 2) Flagged international roaming data and voice CDRs as cross-border spillover 3) Credited ₹3,850 via adjustment voucher ADJ-99218 in Amdocs billing system. Outcome: Total unexpected international roaming fee of ₹3,850 removed from current cycle bill.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0008",
+    "category": "Billing",
+    "subtopic": "unexpected roaming charge",
+    "priority": "Low",
+    "description": "got extra ₹145 roaming fee on my realme 11 when i traveled from jaipur to delhi even though roaming is free??",
+    "resolution": "Root cause: Legacy SMS service center profile in SIM misclassified outgoing verification SMS as out-of-circle roaming. Steps taken: 1) Inspected SMS CDR logs on Delhi SMSC 2) Reversed ₹145 surcharge through billing adjustment code ROAM_DOM_FIX 3) Pushed updated OTA configuration to device. Outcome: Billed roaming fee of ₹145 credited back to customer balance.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0009",
+    "category": "Billing",
+    "subtopic": "unexpected roaming charge",
+    "priority": "Critical",
+    "description": "₹48,200 data roaming charges appeared on my corporate travel line despite activating the Nova Global Travel 3999 pack before flying to Dubai for trade expo. My international roaming data has been throttled to zero, completely paralyzing client communications during critical contract negotiations. Restore data access and cancel these fraudulent charges immediately or my legal team will escalate to consumer court.",
+    "resolution": "Root cause: Provisioning provisioning listener failed to update HLR roaming profile flag upon activation of Nova Global Travel 3999 pack. Steps taken: 1) Manually injected IR entitlement tag onto HLR for subscriber IMSI 2) Re-rated international data bucket from standard pay-as-you-go rates to pack entitlement 3) Wrote off ₹48,200 via executive billing waiver EX-20291 4) Lifted line data suspension on Dubai partner node. Outcome: Erroneous charges of ₹48,200 waived and full high-speed international roaming restored immediately.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0010",
+    "category": "Billing",
+    "subtopic": "wrong plan billed",
+    "priority": "Medium",
+    "description": "My billing cycle statement dated 5th November reflects Nova 799 Max instead of Nova 499 Standard which I migrated to via customer care last month. I am being overcharged by ₹300 plus taxes for data benefits I neither requested nor consumed on my OnePlus Nord CE 3 in Bhopal.",
+    "resolution": "Root cause: CRM order closure failed to push rate plan change event to Amdocs rating engine during bill cycle transition. Steps taken: 1) Verified migration request SR-99120 logged on 12th October 2) Modified rate plan code in billing system to Nova 499 Standard 3) Applied pro-rated billing credit of ₹354 (₹300 + 18% GST). Outcome: Account re-anchored to Nova 499 Standard and corrected bill issued.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0011",
+    "category": "Billing",
+    "subtopic": "wrong plan billed",
+    "priority": "High",
+    "description": "October broadband invoice arrived with NovaFiber 1499 charges instead of my active NovaFiber 999 subscription. This same plan mismatch happened two months ago and your executive assured me the base plan had been locked in the billing database. I refuse to pay ₹1,768 for high-tier bandwidth in Nagpur when our router only supports 100 Mbps.",
+    "resolution": "Root cause: Automatic speed-boost pilot campaign erroneously overwrote subscriber plan catalog profile in BSS. Steps taken: 1) Reverted account profile in AAA radius server to 100 Mbps profile 2) Updated billing catalog ID to NovaFiber 999 3) Created invoice adjustment CR-77291 for ₹590 to offset tier difference. Outcome: Subscriber restored to NovaFiber 999 with billing offset applied to current invoice.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0012",
+    "category": "Billing",
+    "subtopic": "wrong plan billed",
+    "priority": "Low",
+    "description": "bill shows 599 but my plan is 299?? i never changed anything since last month pls check and update amount",
+    "resolution": "Root cause: Automated opt-in script incorrectly assigned value-added streaming bundle to subscriber line. Steps taken: 1) Removed unrequested Entertainment Pack subscription from account hierarchy 2) Adjusted ₹300 difference in current bill cycle statement 3) Sent revised bill copy via email. Outcome: Plan charges realigned to Nova 299 Lite and excess ₹300 removed.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0013",
+    "category": "Billing",
+    "subtopic": "wrong plan billed",
+    "priority": "Medium",
+    "description": "sir i am take nova 399 smart plan last week but message come billing is nova 699 pro. i am poor student in patna preparing exam, cannot pay 699 rupees bill so kindly change back to 399 plan and correct bill.",
+    "resolution": "Root cause: Retail POS agent in Patna circle keyed incorrect tariff code during manual postpaid onboarding. Steps taken: 1) Checked original physical enrollment CAF form 2) Corrected billing tier code from NP-699 to NP-399 in CRM 3) Passed tariff correction credit of ₹300 plus taxes onto next bill. Outcome: Tariff successfully downgraded to Nova 399 Smart and overcharged amount adjusted.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0014",
+    "category": "Billing",
+    "subtopic": "refund not received",
+    "priority": "High",
+    "description": "Reference number REF89211 was generated on 14th October for an approved ₹599 refund, but my SBI savings account has received nothing even after fourteen business days in Vadodara. Your support portal closed the earlier ticket without crediting the funds. Kindly check the bank settlement ARN and transfer the amount.",
+    "resolution": "Root cause: Payment aggregator settlement batch dropped due to mismatched bank account IFSC code. Steps taken: 1) Re-opened parent case REF89211 in nodal treasury portal 2) Updated recipient IFSC with verified State Bank of India branch code 3) Re-queued ₹599 refund via NEFT under UTR SBIN40299102912. Outcome: Refund of ₹599 successfully pushed to customer bank account with UTR confirmation shared.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0015",
+    "category": "Billing",
+    "subtopic": "refund not received",
+    "priority": "High",
+    "description": "Security deposit refund of ₹2,500 following our NovaFiber 1299 connection cancellation in Salt Lake, Kolkata is overdue by over forty days. Every time I contact phone support, agents provide fake payout dates and pass the buck between Kolkata billing and treasury teams. If ₹2,500 is not credited within 48 hours, I will register a complaint on the National Consumer Helpline and TRAI portal.",
+    "resolution": "Root cause: Warehouse CPE modem return inspection status was not marked completed in logistics ERP, blocking security deposit release. Steps taken: 1) Manually validated ONT device return serial number ONT-882190 in warehouse logs 2) Approved deposit release in SAP treasury module 3) Executed IMPS direct payout of ₹2,500 under transaction reference IMPS409182019. Outcome: Security deposit refund of ₹2,500 credited to customer bank account.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0016",
+    "category": "Billing",
+    "subtopic": "refund not received",
+    "priority": "Low",
+    "description": "still waiting for my ₹199 failed recharge refund from 3rd nov, axis bank says money with merchant pls release it.",
+    "resolution": "Root cause: Failed recharge transaction remained in unclaimed merchant buffer on PG node. Steps taken: 1) Reconciled unsettled transaction TXN102941 against merchant terminal 2) Released escrow lock on PG switch 3) Dispatched refund instruction to Axis Bank via ARN 339102849102. Outcome: ₹199 released back to customer Axis Bank account.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0017",
+    "category": "Billing",
+    "subtopic": "refund not received",
+    "priority": "Medium",
+    "description": "My cancelled add-on pack refund of ₹350 was approved on October 22nd under ticket number 449102. Can you please check why the refund credit is not appearing on my latest November billing cycle summary for my Moto G54 postpaid account in Coimbatore? I had expected it to offset my monthly rental.",
+    "resolution": "Root cause: Refund credit voucher was approved after bill cycle cutoff date of October 21st. Steps taken: 1) Located approved credit voucher CV-449102 in pending receivables ledger 2) Applied direct ad-hoc balance adjustment of ₹350 to active account statement 3) Emailed revised net-payable statement to subscriber. Outcome: Credit of ₹350 reflected on subscriber account, reducing payable invoice amount.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0018",
+    "category": "Billing",
+    "subtopic": "late fee dispute",
+    "priority": "Low",
+    "description": "A late fee of ₹100 plus GST was levied on my 10th October bill despite payment being executed via UPI on 8th October, two full days before the due date. The UPI transaction ID is 328190412891 on my Redmi 12 5G. Please waive this penalty in Visakhapatnam since the delay occurred on your server gateway, not on my end.",
+    "resolution": "Root cause: Clearing house holiday created a 48-hour delay in UPI batch settlement file ingestion. Steps taken: 1) Verified timestamp of UPI payment 328190412891 showing execution on October 8th 2) Reversed late fee of ₹100 plus ₹18 GST using waiver code LF_GATEWAY_LAG 3) Updated ledger balance. Outcome: Erroneous late fee of ₹118 completely waived from subscriber ledger.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0019",
+    "category": "Billing",
+    "subtopic": "late fee dispute",
+    "priority": "Medium",
+    "description": "Server downtime on the TeleNova mobile app on October 30th prevented me from clearing my ₹799 bill before midnight, resulting in an unjust ₹150 penalty. I tried multiple times from my Samsung Galaxy A54 in Varanasi and have screenshots showing error code ERR_GATEWAY_TIMEOUT. Please adjust this late fee in the next statement.",
+    "resolution": "Root cause: Scheduled database maintenance on customer mobile app backend caused temporary payment API outage between 21:00 and 01:00 IST. Steps taken: 1) Cross-referenced system outage logs during incident window 2) Verified customer failed payment attempts in audit log 3) Processed ₹150 late fee credit memo LF-WAIVE-202. Outcome: Late payment surcharge of ₹150 reversed and applied as credit for subsequent billing cycle.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0020",
+    "category": "Billing",
+    "subtopic": "late fee dispute",
+    "priority": "High",
+    "description": "Why am I being penalized with a ₹250 late charge when auto-debit was already configured on my account? Your system failed to trigger the debit on November 1st, yet your billing software penalized me as if I defaulted on NovaFiber 799 in Bhubaneswar. This is unfair accounting and I request an immediate credit note.",
+    "resolution": "Root cause: TeleNova recurring billing daemon skipped mandate presentation queue due to internal thread lock. Steps taken: 1) Confirmed active e-mandate status on subscriber account 2) Canceled penalty charge of ₹250 in Billing and Revenue Management (BRM) system 3) Re-executed automated invoice debit successfully. Outcome: ₹250 late fee canceled and invoice cleared via auto-debit.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0021",
+    "category": "Billing",
+    "subtopic": "late fee dispute",
+    "priority": "Medium",
+    "description": "my bill pay on time 15 october morning but system add 118 rupee late fee charge. i am pensioner in Ranchi and paying always before due date, please remove this extra penalty from my nova 299 number.",
+    "resolution": "Root cause: Cash collection partner counter delayed offline payment posting by three days. Steps taken: 1) Inspected physical agent collection receipt timestamped 15th October 10:45 AM 2) Backdated payment receipt date in subscriber billing profile 3) Waived ₹100 late fee and ₹18 GST via code RET_SR_WAIVE. Outcome: Late fee penalty of ₹118 removed and customer account restored to zero overdue.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0022",
+    "category": "Billing",
+    "subtopic": "autopay failure",
+    "priority": "High",
+    "description": "Standing instructions via HDFC debit card for Nova 599 Unlimited failed on 3rd November without sending any SMS alert or OTP challenge. Because the transaction dropped silently, my outgoing calls got restricted yesterday while I was traveling through Trivandrum on my OnePlus 11R. Could you please check why the recurring e-mandate was rejected by your payment gateway?",
+    "resolution": "Root cause: RBI e-mandate token expired without automated re-registration trigger on merchant payment switch. Steps taken: 1) Purged defunct SI token from payment backend 2) Sent fresh e-mandate registration link with SMS challenge to subscriber 3) Restored full outgoing voice and data services on HLR immediately. Outcome: Line re-activated and new debit card mandate successfully registered.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0023",
+    "category": "Billing",
+    "subtopic": "autopay failure",
+    "priority": "Critical",
+    "description": "Autopay mandate dropped unexpectedly on November 2nd, leading to an immediate overnight suspension of all four SIM cards used by our emergency medical courier fleet across Ahmedabad. Our drivers were stranded with zero connectivity for six hours during critical night deliveries. Restore permanent autopay synchronization and verify the mandate token immediately.",
+    "resolution": "Root cause: Webhook endpoint failure during payment aggregator certificate renewal rejected recurring corporate mandate presentation. Steps taken: 1) Manually bypassed dunning suspension flag across all four corporate SIM IMSIs 2) Re-established enterprise auto-debit token on BillDesk corporate engine 3) Processed ₹9,996 invoice settlement manually without penalty. Outcome: All fleet connections restored immediately and autopay mandate validated for future billing cycles.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0024",
+    "category": "Billing",
+    "subtopic": "autopay failure",
+    "priority": "High",
+    "description": "Third consecutive month my UPI autopay mandate on Google Pay failed for NovaFiber 999 in Mysore, prompting repetitive reminder calls from your collection department. Bank confirms the mandate is active and approved with ₹2,000 maximum cap, yet TeleNova system returns error U19 during auto-presentation. Please re-register the mandate on your end.",
+    "resolution": "Root cause: Mandate presentation payload contained malformed merchant transaction reference format violating NPCI UPI 2.0 specifications. Steps taken: 1) Delinked corrupt UPI mandate UMN-881920 in billing database 2) Generated fresh mandate authentication request via NPCI gateway 3) Successfully triggered on-demand mandate test debit of ₹1. Outcome: UPI autopay re-anchored successfully, resolving recurring presentation error U19.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0025",
+    "category": "Billing",
+    "subtopic": "autopay failure",
+    "priority": "Medium",
+    "description": "autopay failed again on paytm for nova 599 plan, getting debit failed message please update my payment link fast",
+    "resolution": "Root cause: Paytm payments bank migration mandate freeze caused transaction bounce. Steps taken: 1) Deactivated defunct wallet mandate on payment switch 2) Generated instant dynamic payment link via SMS for manual settlement 3) Guided user to attach new UPI handle for future auto-debits. Outcome: Pending invoice paid via link and new autopay mandate successfully configured.",
+    "status": "Resolved"
+  }
+]
