@@ -20,3 +20,11 @@ export async function embed(text: string): Promise<number[]> {
   const output = await extractor(text, { pooling: "mean", normalize: true });
   return Array.from(output.data as Float32Array);
 }
+
+// One pipeline call for the whole batch; output is a [texts.length, 384] tensor.
+export async function embedBatch(texts: string[]): Promise<number[][]> {
+  if (texts.length === 0) return [];
+  const extractor = await getExtractor();
+  const output = await extractor(texts, { pooling: "mean", normalize: true });
+  return output.tolist() as number[][];
+}

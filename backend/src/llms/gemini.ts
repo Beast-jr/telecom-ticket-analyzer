@@ -10,6 +10,8 @@ const client = new OpenAI({
 export interface ChatOptions {
   json?: boolean;
   temperature?: number;
+  // Currently honored by groq.ts only.
+  maxTokens?: number;
 }
 
 export async function chat(

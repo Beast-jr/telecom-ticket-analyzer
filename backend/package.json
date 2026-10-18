@@ -9,7 +9,12 @@
     "test:embed": "tsx scripts/test-embed.ts",
     "test:llm": "tsx scripts/test-llm.ts",
     "gen": "tsx scripts/generate-data.ts",
-    "inspect": "tsx scripts/inspect-data.ts"
+    "inspect": "tsx scripts/inspect-data.ts",
+    "clean": "tsx scripts/clean-data.ts",
+    "split": "tsx scripts/split-data.ts",
+    "ingest": "tsx scripts/ingest.ts",
+    "search": "tsx scripts/search-test.ts",
+    "analyze": "tsx scripts/analyze-test.ts"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,4 @@
-import { chat } from "../src/llms/gemini.js";
+import { chat } from "../src/llms/index.js";
 
 const reply = await chat(
   [
