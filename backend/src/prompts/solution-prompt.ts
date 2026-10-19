@@ -25,6 +25,7 @@ ${evidence}
 
 Task: propose exactly 3 DISTINCT solutions for the new ticket (different approaches, not rewordings of the same fix), ranked best first.
 No two solutions may share the same main action (e.g. two solutions that both reset the APN are not distinct).
+Rank by what an experienced agent would try FIRST for this exact description: the most likely and safest fix, supported by the most similar past tickets. Don't rank a fix first just because it sounds more technical or specific.
 For each solution:
 - rank: 1, 2 or 3 (1 = best)
 - title: short, at most 8 words
@@ -38,6 +39,7 @@ Scoring guide:
 - 30-59: partial match
 - below 30: weak guess
 Scores should differ between solutions; don't give everything 90+.
+Reserve llmScore 85+ for fixes that 2+ of the listed tickets show for the same problem.
 Do not use fixed steps like 90/80/70. Judge each solution separately: consider how many listed tickets support it and how closely their problem matches. Two solutions may have close scores if both are well supported.
 
 Rules:

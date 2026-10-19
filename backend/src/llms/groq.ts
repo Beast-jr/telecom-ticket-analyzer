@@ -8,7 +8,6 @@ const client = new OpenAI({
   baseURL: "https://api.groq.com/openai/v1",
 });
 
-const isGptOss = config.GROQ_MODEL.startsWith("openai/gpt-oss");
 const GPT_OSS_MAX_TOKENS = 8000;
 
 // Groq rejects json_object output it can't validate with 400 code "json_validate_failed".
@@ -33,12 +32,13 @@ function extractJson(text: string): string {
 
 export async function chat(
   messages: ChatCompletionMessageParam[],
-  { json = false, temperature, maxTokens }: ChatOptions = {},
+  { json = false, temperature, maxTokens, model = config.GROQ_MODEL }: ChatOptions = {},
 ): Promise<string> {
+  const isGptOss = model.startsWith("openai/gpt-oss");
   const maxCompletionTokens = maxTokens ?? (isGptOss ? GPT_OSS_MAX_TOKENS : undefined);
   const request = (useResponseFormat: boolean) =>
     client.chat.completions.create({
-      model: config.GROQ_MODEL,
+      model,
       messages,
       temperature,
       ...(isGptOss ? { reasoning_effort: "low" as const } : {}),

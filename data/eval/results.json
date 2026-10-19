@@ -1,0 +1,4102 @@
+[
+  {
+    "id": "TKT-0035",
+    "category": "Network/Connectivity",
+    "subtopic": "high latency/gaming lag",
+    "description": "Playing PUBG on my Redmi Note 12 in Kochi, the ping spikes to 250 ms even though I have a Nova 599 Unlimited plan. It's ruining the experience.",
+    "realResolution": "Root cause: routing loop in the regional ISP peering point causing high latency. Steps taken: 1) traced the route and identified the loop at the peering exchange 2) coordinated with the upstream ISP to correct the routing tables 3) performed latency tests post-fix. Outcome: Ping stabilized around 45 ms, gaming experience returned to normal.",
+    "retrieved": [
+      {
+        "id": "TKT-0055",
+        "category": "Network/Connectivity",
+        "subtopic": "high latency/gaming lag",
+        "similarity": 0.7714699234154627
+      },
+      {
+        "id": "TKT-0145",
+        "category": "Network/Connectivity",
+        "subtopic": "high latency/gaming lag",
+        "similarity": 0.7490414127468077
+      },
+      {
+        "id": "TKT-0064",
+        "category": "Network/Connectivity",
+        "subtopic": "high latency/gaming lag",
+        "similarity": 0.7484608981765244
+      },
+      {
+        "id": "TKT-0124",
+        "category": "Network/Connectivity",
+        "subtopic": "high latency/gaming lag",
+        "similarity": 0.7442290465021902
+      },
+      {
+        "id": "TKT-0151",
+        "category": "Network/Connectivity",
+        "subtopic": "high latency/gaming lag",
+        "similarity": 0.7108634792157789
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7714699234154627,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Allocate Dedicated Gaming Slice",
+        "steps": "1) Verify the subscriber is on the Nova 599 Unlimited plan. 2) Allocate a dedicated low‑latency network slice for gaming traffic on the subscriber profile. 3) Optimize routing to use the nearest point‑of‑presence (PoP). 4) Clear any residual QoS queues on the gateway and monitor latency for 15 minutes.",
+        "suitability": 86,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Switch to Less Congested LTE Band",
+        "steps": "1) Check current LTE carrier band usage for the user in Kochi. 2) Shift the device to a less congested LTE band via the network management console. 3) Enable QoS prioritization for gaming ports on the subscriber profile. 4) Verify ping improves during peak hours.",
+        "suitability": 80,
+        "llmScore": 84
+      },
+      {
+        "rank": 3,
+        "title": "Reroute Through Low‑Latency Backbone",
+        "steps": "1) Identify the regional gateway handling the user’s traffic. 2) Reroute the user’s traffic through a low‑latency backbone path. 3) Adjust QoS parameters to prioritize gaming packets. 4) Monitor latency for 10‑15 minutes and confirm ping reduction.",
+        "suitability": 77,
+        "llmScore": 78
+      }
+    ],
+    "top1Suitability": 86,
+    "judge": {
+      "top1Score": 1,
+      "bestOf3Score": 1,
+      "top1Useful": 2,
+      "bestOf3Useful": 3,
+      "distinct": true,
+      "reason": "Solution #1 does not address the routing loop issue (score 1) and is only a modestly sensible attempt (useful 2); other options are somewhat more relevant."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 1610,
+      "searchMs": 129,
+      "llmMs": 3300
+    }
+  },
+  {
+    "id": "TKT-0043",
+    "category": "Network/Connectivity",
+    "subtopic": "broadband outage",
+    "description": "my broadband on nova 599 unlimited stopped working after a storm in Pune, router lights are blinking red and I can't access any sites, please help quickly.",
+    "realResolution": "Root cause: Power surge damaged the ONT hardware. Steps taken: 1) Sent a replacement ONT to the customer's address. 2) Remote-activated the new ONT and synced it with the network. Outcome: Service restored and connectivity is stable across all devices.",
+    "retrieved": [
+      {
+        "id": "TKT-0105",
+        "category": "Network/Connectivity",
+        "subtopic": "broadband outage",
+        "similarity": 0.7320645836834322
+      },
+      {
+        "id": "TKT-0144",
+        "category": "Network/Connectivity",
+        "subtopic": "broadband outage",
+        "similarity": 0.687444794969016
+      },
+      {
+        "id": "TKT-0053",
+        "category": "Network/Connectivity",
+        "subtopic": "broadband outage",
+        "similarity": 0.6794993241549666
+      },
+      {
+        "id": "TKT-0054",
+        "category": "Network/Connectivity",
+        "subtopic": "broadband outage",
+        "similarity": 0.6757440922510755
+      },
+      {
+        "id": "TKT-0123",
+        "category": "Network/Connectivity",
+        "subtopic": "broadband outage",
+        "similarity": 0.6754940863806133
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7320645836834322,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Re‑flash ONT firmware and reset line",
+        "steps": "1) Access the ONT management console remotely 2) Update the ONT firmware to the latest version 3) Perform a full line reset and re‑provision the service 4) Verify sync and DHCP lease acquisition",
+        "suitability": 84,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Replace faulty ONT hardware",
+        "steps": "1) Dispatch a technician to the customer site 2) Replace the ONT unit with a new, tested device 3) Re‑provision the line and run a line test 4) Confirm all indicator lights are normal and internet is reachable",
+        "suitability": 74,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Remote reboot of the modem",
+        "steps": "1) Initiate a remote reboot of the NovaFiber modem via the support portal 2) After reboot, check that the ONT lights show proper sync 3) Verify that the customer obtains a DHCP lease and can browse a test site",
+        "suitability": 66,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 84,
+    "judge": {
+      "top1Score": 2,
+      "bestOf3Score": 5,
+      "top1Useful": 2,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 only loosely relates to the real fix and is not the obvious first step, while #2 aligns perfectly and is the most useful."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 71,
+      "searchMs": 17,
+      "llmMs": 1281
+    }
+  },
+  {
+    "id": "TKT-0050",
+    "category": "Network/Connectivity",
+    "subtopic": "call drops",
+    "description": "Why does my iPhone 13 keep dropping calls in Kochi when I'm on the road? I'm a repeat caller, same issue after the last fix, and it's really annoying.",
+    "realResolution": "Root cause: intermittent handover failure between 4G and 3G cells. Steps taken: 1) applied a network patch to improve handover algorithms 2) updated device's radio firmware remotely 3) verified call continuity across multiple towers Outcome: call drops reduced to zero in subsequent tests, user confirmed stable connectivity.",
+    "retrieved": [
+      {
+        "id": "TKT-0110",
+        "category": "Network/Connectivity",
+        "subtopic": "call drops",
+        "similarity": 0.7049584880083355
+      },
+      {
+        "id": "TKT-0120",
+        "category": "Network/Connectivity",
+        "subtopic": "call drops",
+        "similarity": 0.7021831712951926
+      },
+      {
+        "id": "TKT-0096",
+        "category": "Network/Connectivity",
+        "subtopic": "call drops",
+        "similarity": 0.67611806306825
+      },
+      {
+        "id": "TKT-0109",
+        "category": "Network/Connectivity",
+        "subtopic": "call drops",
+        "similarity": 0.6686458440520743
+      },
+      {
+        "id": "TKT-0887",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.6552210172306104
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7049584880083355,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Reprovision VoLTE Flag",
+        "steps": "1) Access the subscriber's HLR record 2) Reprovision the VoLTE flag for the iPhone 13 3) Instruct the customer to reboot the device and verify call stability",
+        "suitability": 86,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Shift to Less Congested 4G Band",
+        "steps": "1) Identify current 3G/4G band usage for the subscriber in Kochi 2) Move the subscriber profile to a less congested 4G band 3) Push a firmware update via OTA if available 4) Ask the customer to test calls while on the road",
+        "suitability": 75,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Refresh VoWiFi Configuration",
+        "steps": "1) Instruct the customer to disable VoWiFi on the iPhone 13 2) Re‑enable VoWiFi and trigger a profile refresh 3) Update the VoWiFi profile in the network database 4) Perform a test call to confirm stability",
+        "suitability": 66,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 86,
+    "judge": {
+      "top1Score": 2,
+      "bestOf3Score": 3,
+      "top1Useful": 2,
+      "bestOf3Useful": 4,
+      "distinct": true,
+      "reason": "Solution #1 only loosely relates to the fix and is of limited usefulness, while #2 is a more relevant and practical approach."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 61,
+      "searchMs": 35,
+      "llmMs": 1338
+    }
+  },
+  {
+    "id": "TKT-0071",
+    "category": "Network/Connectivity",
+    "subtopic": "5G not showing",
+    "description": "i am using nova 599 unlimited on my iPhone 13 and cant see 5g signal at home in Kochi, any fix plz??",
+    "realResolution": "Root cause: missing 5G roaming profile for the device. Steps taken: 1) added 5G roaming profile to the subscriber's account 2) refreshed the device's network settings. Outcome: 5G signal now appears in the home location.",
+    "retrieved": [
+      {
+        "id": "TKT-0100",
+        "category": "Network/Connectivity",
+        "subtopic": "5G not showing",
+        "similarity": 0.7374991940605212
+      },
+      {
+        "id": "TKT-0141",
+        "category": "Network/Connectivity",
+        "subtopic": "5G not showing",
+        "similarity": 0.7160552582963517
+      },
+      {
+        "id": "TKT-0040",
+        "category": "Network/Connectivity",
+        "subtopic": "5G not showing",
+        "similarity": 0.7139187937713164
+      },
+      {
+        "id": "TKT-0503",
+        "category": "Roaming",
+        "subtopic": "no network abroad",
+        "similarity": 0.7125822326156253
+      },
+      {
+        "id": "TKT-0062",
+        "category": "Network/Connectivity",
+        "subtopic": "5G not showing",
+        "similarity": 0.7008831685495809
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7374991940605212,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Enable 5G entitlement in subscriber profile",
+        "steps": "1) Verify the customer's SIM is linked to the Nova 599 Unlimited plan. 2) Access the subscriber database and set the 5G eligibility flag for the account. 3) Push a network‑refresh notification to the device to apply the change. 4) Ask the customer to check the status bar for the 5G icon.",
+        "suitability": 90,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Reset network settings and force reselection",
+        "steps": "1) Instruct the customer to open Settings > General > Reset > Reset Network Settings. 2) After the reset, power off the iPhone and power it back on. 3) Go to Settings > Cellular > Network Selection and choose \"Manual\" then select the appropriate 5G network. 4) Confirm the 5G signal appears in the status bar.",
+        "suitability": 75,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Activate 5G band on SIM and rescan networks",
+        "steps": "1) Confirm the SIM profile has the 5G band activated; if not, enable it in the provisioning system. 2) Send a command to the device to perform a network attach request. 3) Instruct the customer to toggle Airplane Mode on and off to trigger a network rescan. 4) Verify that 5G networks are now listed and data speeds improve.",
+        "suitability": 71,
+        "llmScore": 71
+      }
+    ],
+    "top1Suitability": 90,
+    "judge": {
+      "top1Score": 4,
+      "bestOf3Score": 4,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 mirrors the real fix by adding a 5G profile and is a logical first step for the agent."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 1231,
+      "searchMs": 88,
+      "llmMs": 2978
+    }
+  },
+  {
+    "id": "TKT-0103",
+    "category": "Network/Connectivity",
+    "subtopic": "no signal indoors",
+    "description": "i cant get any signal in my bedroom in lucknow after switching to nova 299 lite, please fix asap",
+    "realResolution": "Root cause: Indoor femtocell not activated for the subscriber's location. Steps taken: 1) Activated the femtocell service for the address 12-B, Lucknow 2) Sent a configuration update to the device. Outcome: Signal now available inside the bedroom with stable connectivity.",
+    "retrieved": [
+      {
+        "id": "TKT-0057",
+        "category": "Network/Connectivity",
+        "subtopic": "no signal indoors",
+        "similarity": 0.7510857687897893
+      },
+      {
+        "id": "TKT-0037",
+        "category": "Network/Connectivity",
+        "subtopic": "no signal indoors",
+        "similarity": 0.732519209434332
+      },
+      {
+        "id": "TKT-0127",
+        "category": "Network/Connectivity",
+        "subtopic": "no signal indoors",
+        "similarity": 0.715340093108591
+      },
+      {
+        "id": "TKT-0026",
+        "category": "Network/Connectivity",
+        "subtopic": "no signal indoors",
+        "similarity": 0.6893659882057975
+      },
+      {
+        "id": "TKT-0027",
+        "category": "Network/Connectivity",
+        "subtopic": "no signal indoors",
+        "similarity": 0.6772142071991352
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7510857687897893,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Reset APN Settings",
+        "steps": "1) Send the APN configuration link to the customer via SMS 2) Instruct the customer to open network settings and select the APN \"tnova.net\" 3) Have the customer save the settings and restart the device 4) Verify signal strength and data connectivity",
+        "suitability": 83,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Update Indoor Coverage Profile",
+        "steps": "1) Add the customer's residence address to the indoor coverage database 2) Push a network re‑registration command to the device 3) Ask the customer to toggle airplane mode on and off 4) Confirm that signal bars improve inside the bedroom",
+        "suitability": 80,
+        "llmScore": 80
+      },
+      {
+        "rank": 3,
+        "title": "Enable Wi‑Fi Calling & Booster",
+        "steps": "1) Verify tower proximity and current indoor signal levels using network tools 2) Guide the customer to enable Wi‑Fi calling in the phone settings 3) Set the preferred network mode to 4G LTE 4) Schedule a signal booster installation at the address if signal remains weak",
+        "suitability": 70,
+        "llmScore": 70
+      }
+    ],
+    "top1Suitability": 83,
+    "judge": {
+      "top1Score": 1,
+      "bestOf3Score": 3,
+      "top1Useful": 2,
+      "bestOf3Useful": 4,
+      "distinct": true,
+      "reason": "Solution #1 does not address femtocell activation (low match and usefulness), while #2 is a related and sensible first step."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 47,
+      "searchMs": 6,
+      "llmMs": 1810
+    }
+  },
+  {
+    "id": "TKT-0108",
+    "category": "Network/Connectivity",
+    "subtopic": "slow mobile data",
+    "description": "i have nova 299 lite and my redmi note 12 is like sooo slow on data in lucknow?? pls fix",
+    "realResolution": "Root cause: misconfigured APN throttling on the account. Steps taken: 1) corrected APN to \"tnova.net\" 2) cleared data session cache on the network side. Outcome: Data speeds returned to expected 4G rates for the device.",
+    "retrieved": [
+      {
+        "id": "TKT-0048",
+        "category": "Network/Connectivity",
+        "subtopic": "slow mobile data",
+        "similarity": 0.7133691748554906
+      },
+      {
+        "id": "TKT-0088",
+        "category": "Network/Connectivity",
+        "subtopic": "slow mobile data",
+        "similarity": 0.6708586952817319
+      },
+      {
+        "id": "TKT-0058",
+        "category": "Network/Connectivity",
+        "subtopic": "slow mobile data",
+        "similarity": 0.6411922668223072
+      },
+      {
+        "id": "TKT-0960",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.6387122935869591
+      },
+      {
+        "id": "TKT-0118",
+        "category": "Network/Connectivity",
+        "subtopic": "slow mobile data",
+        "similarity": 0.6328418824607751
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7133691748554906,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Correct APN Settings",
+        "steps": "1) Send the correct APN \"tnova.net\" to the device via SMS 2) Instruct the user to reset network settings on the phone 3) Verify data speed after the reset",
+        "suitability": 83,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Re‑provision to Less Congested Band",
+        "steps": "1) Check current cell sector load for Lucknow 2) Re‑provision the subscriber to a less congested 4G carrier frequency 3) Apply a QoS boost for the device's IMSI 4) Test throughput to confirm improvement",
+        "suitability": 80,
+        "llmScore": 80
+      },
+      {
+        "rank": 3,
+        "title": "Enable Data Service Flag in Billing",
+        "steps": "1) Access the billing system for the subscriber account 2) Verify that the data service activation flag is set; if not, enable it 3) Reset the device's APN settings to \"tnova.net\" 4) Confirm connectivity and normal browsing speed",
+        "suitability": 68,
+        "llmScore": 70
+      }
+    ],
+    "top1Suitability": 83,
+    "judge": {
+      "top1Score": 4,
+      "bestOf3Score": 4,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 largely matches the real fix (APN correction) and is the most sensible first step, while the others differ."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 24,
+      "searchMs": 21,
+      "llmMs": 1375
+    }
+  },
+  {
+    "id": "TKT-0137",
+    "category": "Network/Connectivity",
+    "subtopic": "slow mobile data",
+    "description": "On 12th Sep, my iPhone 13 in Lucknow started downloading webpages at a snail pace while I was on the Nova 599 Unlimited plan. The speed was barely 0.5 Mbps even during off-peak hours.",
+    "realResolution": "Root cause: Congested LTE cell caused by mis-aligned carrier aggregation. Steps taken: 1) Re-assigned the device to a less congested LTE band. 2) Reset the APN to \"tnova.net\" and refreshed the data session. Outcome: Average download speed increased to 12 Mbps, restoring normal browsing.",
+    "retrieved": [
+      {
+        "id": "TKT-0128",
+        "category": "Network/Connectivity",
+        "subtopic": "slow mobile data",
+        "similarity": 0.7130528497233872
+      },
+      {
+        "id": "TKT-0047",
+        "category": "Network/Connectivity",
+        "subtopic": "slow mobile data",
+        "similarity": 0.709062085774451
+      },
+      {
+        "id": "TKT-0077",
+        "category": "Network/Connectivity",
+        "subtopic": "slow mobile data",
+        "similarity": 0.6960955032493639
+      },
+      {
+        "id": "TKT-0147",
+        "category": "Network/Connectivity",
+        "subtopic": "slow mobile data",
+        "similarity": 0.6938817437835532
+      },
+      {
+        "id": "TKT-0098",
+        "category": "Network/Connectivity",
+        "subtopic": "slow mobile data",
+        "similarity": 0.6886366834037227
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7130528497233872,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Shift to less congested band",
+        "steps": "1) Verify the subscriber is on a 4G/5G band experiencing congestion. 2) Reassign the UE to a less loaded 5G‑NR or 4G‑A band. 3) Confirm the new band allocation and run a speed test.",
+        "suitability": 86,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Rebalance cell load across sectors",
+        "steps": "1) Identify neighboring cells with spare capacity. 2) Reallocate radio resources from those cells to the affected sector. 3) Clear any stuck data sessions on the core. 4) Ask the user to restart the device and verify speed.",
+        "suitability": 78,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Upgrade subscriber QoS profile",
+        "steps": "1) Review the current QoS class assigned to the subscriber. 2) Promote the subscriber to a higher‑priority QoS tier appropriate for the Nova 599 Unlimited plan. 3) Optimize the RAN scheduler to allocate additional resource blocks. 4) Perform a network refresh on the device and test throughput.",
+        "suitability": 70,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 86,
+    "judge": {
+      "top1Score": 4,
+      "bestOf3Score": 4,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 aligns closely with the actual fix (band reassignment) and is the most sensible first action, while the others differ."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 81,
+      "searchMs": 6,
+      "llmMs": 1613
+    }
+  },
+  {
+    "id": "TKT-0181",
+    "category": "Billing",
+    "subtopic": "autopay failure",
+    "description": "I am a non-native English speaker; my autopay for NovaFiber 999 didn't work on 20 May, causing my service to suspend in the middle of a video conference on my iPhone 13 in Kolkata.",
+    "realResolution": "Root cause: Incorrect bank routing number entered during initial setup. Steps taken: 1) Collected correct bank routing details from customer 2) Updated the payment profile in the autopay system 3) Processed the pending ₹999 payment and re-activated the service instantly. Outcome: Service restored, and future autopays will succeed with corrected details.",
+    "retrieved": [
+      {
+        "id": "TKT-0209",
+        "category": "Billing",
+        "subtopic": "autopay failure",
+        "similarity": 0.6583729847478126
+      },
+      {
+        "id": "TKT-0248",
+        "category": "Billing",
+        "subtopic": "autopay failure",
+        "similarity": 0.6417649455092762
+      },
+      {
+        "id": "TKT-0286",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.5909955937203526
+      },
+      {
+        "id": "TKT-0238",
+        "category": "Billing",
+        "subtopic": "autopay failure",
+        "similarity": 0.5822657968768596
+      },
+      {
+        "id": "TKT-0366",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.5727676303663538
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.6583729847478126,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Update Card Token and Re‑run Autopay",
+        "steps": "1) Verify the card on file for expiration date; 2) Update the card token with the new expiry details in the payment gateway; 3) Re‑initiate the autopay transaction for the outstanding NovaFiber 999 bill; 4) Confirm payment success and restore the suspended service; 5) Add a 24‑hour grace period for any future autopay failures",
+        "suitability": 83,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Resolve Bank Authentication Issue",
+        "steps": "1) Contact the customer's bank to identify the authentication failure that blocked the autopay; 2) Obtain confirmation that the issue is cleared; 3) Re‑process the NovaFiber 999 autopay transaction; 4) Reactivate the service once payment is confirmed; 5) Log the transaction reference for future tracking",
+        "suitability": 72,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Provide Temporary Service Credit While Fixing Autopay",
+        "steps": "1) Apply a short‑term service credit to compensate for the outage; 2) Open a ticket with the billing team to investigate the autopay failure root cause; 3) Update payment details or resolve the failure as needed; 4) Re‑run the autopay and confirm service restoration; 5) Notify the customer of credit application and resolution status",
+        "suitability": 62,
+        "llmScore": 55
+      }
+    ],
+    "top1Suitability": 83,
+    "judge": {
+      "top1Score": 1,
+      "bestOf3Score": 3,
+      "top1Useful": 2,
+      "bestOf3Useful": 4,
+      "distinct": true,
+      "reason": "Solution #1 addresses card details, not the routing error, so low match and usefulness; #2 targets a bank issue, aligning partially with the real fix and is the most useful of the three."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 90,
+      "searchMs": 10,
+      "llmMs": 10520
+    }
+  },
+  {
+    "id": "TKT-0213",
+    "category": "Billing",
+    "subtopic": "unexpected roaming charge",
+    "description": "i was charged 3000 rupees for roaming while i was in guwahati on 10 may i dont understand how this happened i will complain to TRAI if not fixed fast!!",
+    "realResolution": "Root cause: Incorrect network classification caused the domestic tower to be marked as international roaming. Steps taken: 1) Reprovisioned the SIM profile to correct the network classification. 2) Reset the APN settings to \"tnova.net\" on the device. 3) Credited the full ₹3,000 roaming amount with reference REF33445. Outcome: The erroneous roaming charge was fully refunded and the SIM now correctly registers as domestic, preventing future incidents.",
+    "retrieved": [
+      {
+        "id": "TKT-0557",
+        "category": "Roaming",
+        "subtopic": "high roaming bill",
+        "similarity": 0.7042869652904457
+      },
+      {
+        "id": "TKT-0006",
+        "category": "Billing",
+        "subtopic": "unexpected roaming charge",
+        "similarity": 0.690056370585471
+      },
+      {
+        "id": "TKT-0202",
+        "category": "Billing",
+        "subtopic": "unexpected roaming charge",
+        "similarity": 0.678903483512121
+      },
+      {
+        "id": "TKT-0590",
+        "category": "Roaming",
+        "subtopic": "high roaming bill",
+        "similarity": 0.6764189512808634
+      },
+      {
+        "id": "TKT-0509",
+        "category": "Roaming",
+        "subtopic": "high roaming bill",
+        "similarity": 0.6763117003504493
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": false,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7042869652904457,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Update roaming tariff table",
+        "steps": "1) Access the roaming tariff configuration for the subscriber's plan. 2) Update the table to the latest rates applicable to domestic roaming. 3) Re‑calculate the charges for the May 10 session. 4) Apply a credit for any over‑charge and generate a revised bill.",
+        "suitability": 81,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Re‑rate CDRs and credit",
+        "steps": "1) Retrieve the Call Detail Records for the Guwahati roaming period. 2) Identify any records that were rated at a metered rate. 3) Re‑rate those records to the plan‑allowed zero or capped rate. 4) Issue a billing credit for the excess amount and update the invoice.",
+        "suitability": 77,
+        "llmScore": 82
+      },
+      {
+        "rank": 3,
+        "title": "Clear roaming flag on profile",
+        "steps": "1) Open the subscriber's HLR profile. 2) Verify the roaming flag status. 3) Reset the roaming flag to inactive and ensure the correct plan restrictions are applied. 4) Process a credit for the erroneous charge and confirm future roaming will be blocked as per the plan.",
+        "suitability": 74,
+        "llmScore": 78
+      }
+    ],
+    "top1Suitability": 81,
+    "judge": {
+      "top1Score": 2,
+      "bestOf3Score": 4,
+      "top1Useful": 2,
+      "bestOf3Useful": 4,
+      "distinct": true,
+      "reason": "Solution #1 only tweaks tariffs, not the mis‑classification that caused the charge, but Solution #3 addresses the roaming flag like the real fix."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 90,
+      "searchMs": 7,
+      "llmMs": 9500
+    }
+  },
+  {
+    "id": "TKT-0214",
+    "category": "Billing",
+    "subtopic": "wrong plan billed",
+    "description": "I am a repeat caller; last month I was billed for Nova 599 Unlimited but I actually switched to Nova 299 Lite on 15 March, yet my May bill still shows the higher plan fee of ₹599.",
+    "realResolution": "Root cause: Plan change request was not propagated to the billing engine due to a pending approval flag. Steps taken: 1) Verified the plan change request in the CRM and cleared the pending flag. 2) Updated the billing profile to Nova 299 Lite. 3) Issued a prorated credit of ₹300 with reference REF77889. Outcome: The correct plan is now applied and the overcharged amount has been refunded.",
+    "retrieved": [
+      {
+        "id": "TKT-0197",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.7917146015068541
+      },
+      {
+        "id": "TKT-0249",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.7815366441896031
+      },
+      {
+        "id": "TKT-0155",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.76100155435709
+      },
+      {
+        "id": "TKT-0215",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.7559331345867779
+      },
+      {
+        "id": "TKT-0221",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.7447298714126162
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7917146015068541,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Correct plan and regenerate invoice",
+        "steps": "1) Verify the active subscription in the CRM shows Nova 299 Lite. 2) Update the billing profile to the correct plan. 3) Regenerate the latest invoice and send it to the customer.",
+        "suitability": 92,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Refund excess charge after plan fix",
+        "steps": "1) Confirm the customer’s plan is Nova 299 Lite in the system. 2) Reverse the over‑charged amount for the Nova 599 Unlimited fee. 3) Document the refund reference and notify the customer.",
+        "suitability": 81,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Adjust renewal settings to prevent mis‑selection",
+        "steps": "1) Review the automated renewal rules linked to the account. 2) Ensure the renewal is set to retain the Nova 299 Lite plan. 3) Save the changes and monitor the next billing cycle for correctness.",
+        "suitability": 74,
+        "llmScore": 71
+      }
+    ],
+    "top1Suitability": 92,
+    "judge": {
+      "top1Score": 3,
+      "bestOf3Score": 3,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 only partially matches the real fix (updates plan but misses flag clearance and credit), yet it is a sensible first action for the agent."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 81,
+      "searchMs": 5,
+      "llmMs": 8563
+    }
+  },
+  {
+    "id": "TKT-0233",
+    "category": "Billing",
+    "subtopic": "wrong plan billed",
+    "description": "I signed up for Nova 299 Lite but the bill shows Nova 599 Unlimited fees; I'm a senior citizen in Guwahati and confused.",
+    "realResolution": "Root cause: plan migration script mis-assigned the higher tier. Steps taken: 1) audited plan assignment logs 2) reverted account to Nova 299 Lite 3) applied prorated credit for overcharge with reference REF55421. Outcome: correct plan applied and credit issued.",
+    "retrieved": [
+      {
+        "id": "TKT-0197",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.704692088382233
+      },
+      {
+        "id": "TKT-0155",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.6757403138144062
+      },
+      {
+        "id": "TKT-0186",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.6567355190055235
+      },
+      {
+        "id": "TKT-0249",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.6540789270729063
+      },
+      {
+        "id": "TKT-0221",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.6503431937740918
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.704692088382233,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Revert to Correct Plan and Refund",
+        "steps": "1) Verify the subscriber's current plan in the CRM; 2) Switch the active plan back to Nova 299 Lite; 3) Process a refund for the overcharged amount; 4) Update renewal settings to prevent future mis‑selection; 5) Confirm the corrected plan with the customer",
+        "suitability": 85,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Correct Tariff Code and Re‑issue Invoice",
+        "steps": "1) Locate the tariff code applied to the latest bill; 2) Change the tariff code to Nova 299 Lite; 3) Recalculate the invoice amount; 4) Generate and send a revised statement to the customer; 5) Document the change in the account notes",
+        "suitability": 76,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Update Billing Profile and Regenerate Bill",
+        "steps": "1) Review the subscriber's billing profile for mismatched plan data; 2) Update the profile to reflect Nova 299 Lite; 3) Regenerate the current invoice with the correct charges; 4) Email the corrected invoice to the customer; 5) Verify that future cycles use the updated profile",
+        "suitability": 65,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 85,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 matches the actual fix and is the obvious first action an agent would take."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 68,
+      "searchMs": 2,
+      "llmMs": 9527
+    }
+  },
+  {
+    "id": "TKT-0239",
+    "category": "Billing",
+    "subtopic": "duplicate charge",
+    "description": "I was looking at my May 2024 statement on my Redmi Note 12 and saw two ₹599 entries for the Nova 599 Unlimited plan, both dated 12-05-2024. I'm a college student in Pune and need clarification.",
+    "realResolution": "Root cause: System glitch caused duplicate posting of the monthly subscription. Steps taken: 1) Identified duplicate transaction in billing ledger 2) Reversed the extra ₹599 debit with reference REF84521 3) Updated the account ledger to reflect a single charge. Outcome: Account now shows only one correct charge and the duplicate amount has been refunded to the bank account.",
+    "retrieved": [
+      {
+        "id": "TKT-0785",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.5567565787443391
+      },
+      {
+        "id": "TKT-0805",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.5567314552757745
+      },
+      {
+        "id": "TKT-0186",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.5543878875692885
+      },
+      {
+        "id": "TKT-0810",
+        "category": "Plan Change",
+        "subtopic": "data rollover missing",
+        "similarity": 0.5514072900035037
+      },
+      {
+        "id": "TKT-0795",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.5469052693349045
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": false,
+    "subtopicHit5": false,
+    "topSimilarity": 0.5567565787443391,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Reverse duplicate charge",
+        "steps": "1) Open the billing history for the subscriber and locate the two ₹599 entries dated 12-05-2024. 2) Verify that only one charge corresponds to the legitimate Nova 599 Unlimited subscription. 3) Process a credit for the duplicate entry and update the invoice to reflect a single ₹599 charge. 4) Notify the customer of the correction and provide the revised statement.",
+        "suitability": 75,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Force plan re‑provisioning",
+        "steps": "1) Check the provisioning log for the May 12 upgrade request to confirm the plan was applied only once. 2) If a duplicate provisioning flag is found, manually remove the extra entry via the admin console. 3) Re‑apply the Nova 599 Unlimited profile to the subscriber account and refresh the device APN settings. 4) Verify that billing now shows a single ₹599 charge.",
+        "suitability": 64,
+        "llmScore": 70
+      },
+      {
+        "rank": 3,
+        "title": "Audit billing batch for duplicates",
+        "steps": "1) Access the billing batch job that generated May 2024 invoices. 2) Search for duplicate entries for the subscriber’s MSISDN on 12-05-2024. 3) If a duplicate record exists, delete the extra entry and re‑run the batch for that date. 4) Confirm the corrected invoice reflects only one ₹599 charge and inform the customer.",
+        "suitability": 58,
+        "llmScore": 60
+      }
+    ],
+    "top1Suitability": 75,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 exactly matches the real fix and is the obvious first step an agent would take."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 105,
+      "searchMs": 6,
+      "llmMs": 9680
+    }
+  },
+  {
+    "id": "TKT-0244",
+    "category": "Billing",
+    "subtopic": "refund not received",
+    "description": "I am a repeat caller; my refund of ₹1,250 for a cancelled Nova 599 Unlimited plan from 15-07-2024 still hasn't hit my bank after three weeks. This impacts my small business payments.",
+    "realResolution": "Root cause: Refund batch processing error caused the transaction to be omitted. Steps taken: 1) Located the pending refund request in the financial system 2) Re-initiated the refund via the banking gateway 3) Confirmed successful transfer with reference REF112233. Outcome: ₹1,250 has been transferred to the customer's bank account and confirmation sent.",
+    "retrieved": [
+      {
+        "id": "TKT-0216",
+        "category": "Billing",
+        "subtopic": "refund not received",
+        "similarity": 0.7124356048336626
+      },
+      {
+        "id": "TKT-0177",
+        "category": "Billing",
+        "subtopic": "refund not received",
+        "similarity": 0.6536339021494948
+      },
+      {
+        "id": "TKT-0158",
+        "category": "Billing",
+        "subtopic": "refund not received",
+        "similarity": 0.6458613093843195
+      },
+      {
+        "id": "TKT-0206",
+        "category": "Billing",
+        "subtopic": "refund not received",
+        "similarity": 0.644165901198394
+      },
+      {
+        "id": "TKT-0169",
+        "category": "Billing",
+        "subtopic": "refund not received",
+        "similarity": 0.6346463810504982
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7124356048336626,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Verify account and reprocess refund",
+        "steps": "1) Open the customer's financial record and locate the pending refund entry. 2) Confirm the bank account number matches the customer's current details. 3) If a mismatch is found, update the account information. 4) Re‑initiate the refund transaction and note the new reference. 5) Notify the customer of the expected credit timeline.",
+        "suitability": 85,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Escalate for manual approval and immediate payout",
+        "steps": "1) Flag the refund case as high priority and route it to the finance lead. 2) Obtain manual approval for the pending refund. 3) Process the refund instantly via the preferred payment channel. 4) Record the transaction and send a confirmation SMS/email to the customer.",
+        "suitability": 73,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Rerun refund batch to release pending funds",
+        "steps": "1) Identify the refund batch that contains the customer's pending refund. 2) Verify that the batch completed successfully for all other accounts. 3) Rerun the batch or execute a targeted batch run for the affected account. 4) Confirm the refund has posted and inform the customer of the completion.",
+        "suitability": 71,
+        "llmScore": 71
+      }
+    ],
+    "top1Suitability": 85,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 matches the actual fix and is the obvious first action an agent would take"
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 101,
+      "searchMs": 5,
+      "llmMs": 9414
+    }
+  },
+  {
+    "id": "TKT-0251",
+    "category": "Billing",
+    "subtopic": "late fee dispute",
+    "description": "Received a ₹250 late fee on 20th July even though my NovaFiber 999 connection in Indore was paid on time; the iPhone 13 shows the due date was 15th July. This is unacceptable and I demand the fee be removed immediately.",
+    "realResolution": "Root cause: An automated late-fee rule was triggered due to a delayed update of the payment receipt timestamp. Steps taken: 1) Reviewed the payment logs and confirmed receipt was recorded on 15th July. 2) Adjusted the fee calculation engine to exclude the erroneous charge and removed the ₹250 fee from the account. Outcome: The late fee has been waived and the customer's billing statement now reflects the correct zero-fee status.",
+    "retrieved": [
+      {
+        "id": "TKT-0217",
+        "category": "Billing",
+        "subtopic": "late fee dispute",
+        "similarity": 0.7461920438200677
+      },
+      {
+        "id": "TKT-0199",
+        "category": "Billing",
+        "subtopic": "late fee dispute",
+        "similarity": 0.7264250150322829
+      },
+      {
+        "id": "TKT-0207",
+        "category": "Billing",
+        "subtopic": "late fee dispute",
+        "similarity": 0.7108579893993489
+      },
+      {
+        "id": "TKT-0208",
+        "category": "Billing",
+        "subtopic": "late fee dispute",
+        "similarity": 0.6945870640733647
+      },
+      {
+        "id": "TKT-0178",
+        "category": "Billing",
+        "subtopic": "late fee dispute",
+        "similarity": 0.6877045976908266
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7461920438200677,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Waive Fee and Credit Account",
+        "steps": "1) Retrieve the payment receipt from gateway logs. 2) Verify the payment was received before the due date. 3) Reverse the ₹250 late fee and apply a credit to the account. 4) Update the payment status to \"cleared\" in the billing system.",
+        "suitability": 85,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Adjust Timestamp and Remove Fee",
+        "steps": "1) Locate the transaction record for the July payment. 2) Compare the bank timestamp with the system timestamp and correct any timezone discrepancy. 3) Update the billing system with the corrected timestamp. 4) Waive the ₹250 late fee and confirm the account shows on‑time payment.",
+        "suitability": 81,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Correct Due‑Date Configuration",
+        "steps": "1) Review the due‑date setting for the NovaFiber 999 plan in the billing configuration. 2) Align the due‑date with the correct billing cycle for Indore customers. 3) Remove the erroneous ₹250 late fee and add a credit note. 4) Verify future invoices use the updated due‑date configuration.",
+        "suitability": 70,
+        "llmScore": 71
+      }
+    ],
+    "top1Suitability": 85,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 directly addresses the erroneous fee by verifying payment and reversing it, matching the real fix and is the obvious first action."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 68,
+      "searchMs": 6,
+      "llmMs": 9470
+    }
+  },
+  {
+    "id": "TKT-0252",
+    "category": "Service Activation",
+    "subtopic": "new SIM not activated",
+    "description": "I just got my Nova 299 Lite SIM in Pune and tried to use it on my Samsung Galaxy A54, but the network never shows up even after a full restart of the phone and checking the SIM tray. The activation message still says pending and I need it for my classes tomorrow.",
+    "realResolution": "Root cause: SIM provisioning was pending in the activation queue. Steps taken: 1) Verified the SIM serial number in the system and confirmed it was not yet flagged as active. 2) Manually triggered activation request and updated the status in the HLR. Outcome: The SIM is now active, network appears, and the customer can use voice and data services.",
+    "retrieved": [
+      {
+        "id": "TKT-0336",
+        "category": "Service Activation",
+        "subtopic": "new SIM not activated",
+        "similarity": 0.8776720717442814
+      },
+      {
+        "id": "TKT-0346",
+        "category": "Service Activation",
+        "subtopic": "new SIM not activated",
+        "similarity": 0.8742852780858467
+      },
+      {
+        "id": "TKT-0315",
+        "category": "Service Activation",
+        "subtopic": "new SIM not activated",
+        "similarity": 0.8689967400859183
+      },
+      {
+        "id": "TKT-0294",
+        "category": "Service Activation",
+        "subtopic": "new SIM not activated",
+        "similarity": 0.8659689230628228
+      },
+      {
+        "id": "TKT-0326",
+        "category": "Service Activation",
+        "subtopic": "new SIM not activated",
+        "similarity": 0.8610243679834754
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.8776720717442814,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Manual activation trigger",
+        "steps": "1) Verify the customer's SIM ICCID/IMSI in the provisioning system. 2) Manually trigger the activation request in the provisioning portal. 3) Confirm activation status and inform the customer that the network should appear.",
+        "suitability": 93,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Re‑provision with correct IMSI",
+        "steps": "1) Check the SIM profile in the HLR for correct IMSI mapping. 2) Re‑provision the SIM with the correct IMSI and activate the profile. 3) Send a fresh activation SMS to the device and verify network visibility.",
+        "suitability": 85,
+        "llmScore": 85
+      },
+      {
+        "rank": 3,
+        "title": "Refresh HLR entry",
+        "steps": "1) Locate the SIM entry in the HLR database. 2) Refresh or reload the HLR entry to clear any pending provisioning flags. 3) Verify that the SIM status shows active and advise the customer to restart the phone.",
+        "suitability": 82,
+        "llmScore": 78
+      }
+    ],
+    "top1Suitability": 93,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 exactly matches the manual activation that resolved the issue and is the obvious first step."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 71,
+      "searchMs": 7,
+      "llmMs": 8534
+    }
+  },
+  {
+    "id": "TKT-0255",
+    "category": "Service Activation",
+    "subtopic": "eSIM QR not working",
+    "description": "my new nova 299 lite eSIM on redmi note 12 in guwahati keeps failing, the QR just flashes and says error, tried reboot but nothing works, need it for work",
+    "realResolution": "Root cause: Backend provisioning failed to assign the eSIM profile to the device. Steps taken: 1) Reviewed the provisioning logs and identified a missing profile ID. 2) Re-issued the eSIM profile with a correct identifier. 3) Assisted the customer to scan the new QR and complete activation. Outcome: The eSIM activates correctly, data is functional, and the customer can resume work.",
+    "retrieved": [
+      {
+        "id": "TKT-0338",
+        "category": "Service Activation",
+        "subtopic": "eSIM QR not working",
+        "similarity": 0.7356334968951211
+      },
+      {
+        "id": "TKT-0339",
+        "category": "Service Activation",
+        "subtopic": "eSIM QR not working",
+        "similarity": 0.7300553869289399
+      },
+      {
+        "id": "TKT-0379",
+        "category": "SIM & Porting",
+        "subtopic": "SIM card damaged",
+        "similarity": 0.7261466970120899
+      },
+      {
+        "id": "TKT-0265",
+        "category": "Service Activation",
+        "subtopic": "eSIM QR not working",
+        "similarity": 0.7121491154043592
+      },
+      {
+        "id": "TKT-0317",
+        "category": "Service Activation",
+        "subtopic": "eSIM QR not working",
+        "similarity": 0.7096941113834832
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7356334968951211,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Revoke and Re‑issue eSIM QR",
+        "steps": "1) Verify the customer's ICCID and current eSIM status in the system. 2) Revoke the existing eSIM profile that has the corrupted QR payload. 3) Generate a fresh eSIM QR linked to the same ICCID with a valid signature. 4) Email the new QR securely to the customer and guide them to scan it on the Redmi Note 12.",
+        "suitability": 85,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Cancel Expired Session, Create New QR",
+        "steps": "1) Check the provisioning session ID associated with the failed QR scan. 2) Cancel the expired session in the activation console. 3) Create a new eSIM QR for the Nova 299 Lite plan with a fresh provisioning token. 4) Send the QR via the MyTeleNova app and walk the customer through the scanning process.",
+        "suitability": 76,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Deactivate and Issue Replacement eSIM",
+        "steps": "1) Deactivate the current eSIM profile that is not provisioning. 2) Issue a replacement eSIM QR code tied to the same MSISDN. 3) Deliver the new QR to the customer's email. 4) Instruct the customer to scan the replacement QR on the Redmi Note 12 and confirm activation.",
+        "suitability": 68,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 85,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 exactly mirrors the real fix and is the obvious first action an agent would take."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 92,
+      "searchMs": 6,
+      "llmMs": 8769
+    }
+  },
+  {
+    "id": "TKT-0257",
+    "category": "Service Activation",
+    "subtopic": "broadband installation delay",
+    "description": "i need nova 999 broadband in pune, booked last week, still waiting for the install guy, any update pls",
+    "realResolution": "Root cause: The installation request was stuck in the queue due to high demand. Steps taken: 1) Located the pending work order in the system. 2) Escalated the request to the field operations team for immediate assignment. Outcome: A technician was dispatched the same day and completed the installation within 2 hours.",
+    "retrieved": [
+      {
+        "id": "TKT-0360",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.7204870284631392
+      },
+      {
+        "id": "TKT-0286",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.7132604522937618
+      },
+      {
+        "id": "TKT-0340",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.7009816802690889
+      },
+      {
+        "id": "TKT-0328",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.6994077062791818
+      },
+      {
+        "id": "TKT-0366",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.6973571879842306
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7204870284631392,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Prioritize Technician Dispatch",
+        "steps": "1) Contact field operations and flag the case as high priority. 2) Re‑assign a senior technician to the Pune address with an immediate appointment. 3) Confirm the appointment time with the customer and update the schedule in the system.",
+        "suitability": 85,
+        "llmScore": 84
+      },
+      {
+        "rank": 2,
+        "title": "Escalate Line Provisioning to Exchange",
+        "steps": "1) Open a provisioning request with the local exchange team citing the pending Nova 999 activation in Pune. 2) Verify that the line is correctly assigned and provisioned in the system. 3) Update the work order status to reflect provisioning completion and notify the field team.",
+        "suitability": 84,
+        "llmScore": 92
+      },
+      {
+        "rank": 3,
+        "title": "Provide Compensation for Delay",
+        "steps": "1) Approve a compensation voucher (e.g., ₹500) for the inconvenience caused by the installation delay. 2) Communicate the voucher details to the customer and apply it to their account. 3) Ensure the technician visit is scheduled and confirm completion of the broadband installation.",
+        "suitability": 74,
+        "llmScore": 71
+      }
+    ],
+    "top1Suitability": 85,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 matches the actual fix and is the obvious first action an agent would take"
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 60,
+      "searchMs": 10,
+      "llmMs": 7257
+    }
+  },
+  {
+    "id": "TKT-0262",
+    "category": "Service Activation",
+    "subtopic": "international roaming activation",
+    "description": "need roaming on my nova 599 unlimited while i am in guwahati, i tried the app but it says not allowed pls fix",
+    "realResolution": "Root cause: The roaming option was disabled for the account due to an outdated profile. Steps taken: 1) Updated the subscriber profile to allow roaming. 2) Re-issued the roaming activation request and confirmed the status. Outcome: Roaming is now active, and the customer can use voice and data while traveling.",
+    "retrieved": [
+      {
+        "id": "TKT-0585",
+        "category": "Roaming",
+        "subtopic": "roaming pack not applied",
+        "similarity": 0.7100857643351165
+      },
+      {
+        "id": "TKT-0345",
+        "category": "Service Activation",
+        "subtopic": "international roaming activation",
+        "similarity": 0.6966243798637834
+      },
+      {
+        "id": "TKT-0574",
+        "category": "Roaming",
+        "subtopic": "no network abroad",
+        "similarity": 0.6947375812044672
+      },
+      {
+        "id": "TKT-0281",
+        "category": "Service Activation",
+        "subtopic": "international roaming activation",
+        "similarity": 0.6927895961487838
+      },
+      {
+        "id": "TKT-0292",
+        "category": "Service Activation",
+        "subtopic": "international roaming activation",
+        "similarity": 0.685808799065772
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": false,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7100857643351165,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Enable roaming flag in HLR/CRM",
+        "steps": "1) Verify the subscriber's eligibility for international roaming on the Nova 599 Unlimited plan 2) Enable the roaming flag for the IMSI in the HLR and update the rate plan 3) Send a confirmation SMS with the activation timestamp",
+        "suitability": 83,
+        "llmScore": 82
+      },
+      {
+        "rank": 2,
+        "title": "Manually trigger roaming pack activation",
+        "steps": "1) Locate the pending roaming pack transaction in the provisioning system 2) Manually trigger the pack activation 3) Send a confirmation SMS to the subscriber and ask them to verify data usage",
+        "suitability": 81,
+        "llmScore": 88
+      },
+      {
+        "rank": 3,
+        "title": "Refresh device profile via push notification",
+        "steps": "1) Activate roaming for the account in the CRM if not already done 2) Push a notification to the device to refresh its roaming profile 3) Ask the customer to restart the app and check connectivity",
+        "suitability": 70,
+        "llmScore": 70
+      }
+    ],
+    "top1Suitability": 83,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 directly updates the roaming flag like the real fix and is the obvious first step an agent would take."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 52,
+      "searchMs": 5,
+      "llmMs": 7420
+    }
+  },
+  {
+    "id": "TKT-0302",
+    "category": "Service Activation",
+    "subtopic": "OTT add-on not active",
+    "description": "i signed up for the nova 599 unlimited plan and added the streaming bundle on 1st nov but the app still shows no access, any quick fix pls",
+    "realResolution": "Root cause: OTT bundle provisioning failed due to a mismatched subscriber ID. Steps taken: 1) Mapped the correct subscriber ID to the OTT service 2) Re-sent the entitlement payload to the OTT platform 3) Confirmed bundle activation in the user portal. Outcome: OTT add-on is now visible and usable.",
+    "retrieved": [
+      {
+        "id": "TKT-0333",
+        "category": "Service Activation",
+        "subtopic": "OTT add-on not active",
+        "similarity": 0.7016637688853158
+      },
+      {
+        "id": "TKT-0757",
+        "category": "Plan Change",
+        "subtopic": "benefits missing after change",
+        "similarity": 0.6854443317709076
+      },
+      {
+        "id": "TKT-0794",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.6721385683981963
+      },
+      {
+        "id": "TKT-0847",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.6696518137200729
+      },
+      {
+        "id": "TKT-0858",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.6617876671039882
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7016637688853158,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Force OTT bundle synchronization",
+        "steps": "1) Open the provisioning console and locate the subscriber's account. 2) Initiate a manual synchronization of the OTT add‑on bundle. 3) Verify that the streaming bundle status is updated to active in the system. 4) Ask the customer to refresh the app and confirm access.",
+        "suitability": 83,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Re‑trigger plan change provisioning",
+        "steps": "1) Access the plan change API for the subscriber. 2) Re‑execute the upgrade request to Nova 599 Unlimited, ensuring the streaming bundle is included. 3) Force a profile refresh on the HLR/HLR equivalent. 4) Instruct the customer to restart the device and check the app for the bundle.",
+        "suitability": 77,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Add OTT service flag manually",
+        "steps": "1) Open the subscriber's service profile in the provisioning system. 2) Add the streaming bundle flag to the account manually. 3) Trigger a device sync to push the new flag. 4) Confirm in the portal that the bundle appears and advise the customer to relaunch the app.",
+        "suitability": 67,
+        "llmScore": 66
+      }
+    ],
+    "top1Suitability": 83,
+    "judge": {
+      "top1Score": 4,
+      "bestOf3Score": 4,
+      "top1Useful": 4,
+      "bestOf3Useful": 4,
+      "distinct": true,
+      "reason": "Solution #1 closely mirrors the actual fix by resynchronizing the OTT entitlement, and it’s a sensible first action for the agent."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 50,
+      "searchMs": 3,
+      "llmMs": 7468
+    }
+  },
+  {
+    "id": "TKT-0319",
+    "category": "Service Activation",
+    "subtopic": "VoLTE not enabled",
+    "description": "I called earlier about my Nova 299 Lite VoLTE not working on my Samsung Galaxy A54, fixed it then it stopped again after the latest update, this is the second time this week.",
+    "realResolution": "Root cause: VoLTE flag cleared during recent OTA update. Steps taken: 1) Verified device capability for VoLTE 2) Re-provisioned VoLTE flag in the HLR for the subscriber 3) Instructed the customer to restart the device Outcome: VoLTE is now enabled and calls are clear on the device.",
+    "retrieved": [
+      {
+        "id": "TKT-0331",
+        "category": "Service Activation",
+        "subtopic": "VoLTE not enabled",
+        "similarity": 0.7208530834630895
+      },
+      {
+        "id": "TKT-0343",
+        "category": "Service Activation",
+        "subtopic": "VoLTE not enabled",
+        "similarity": 0.7059048673403111
+      },
+      {
+        "id": "TKT-0351",
+        "category": "Service Activation",
+        "subtopic": "VoLTE not enabled",
+        "similarity": 0.6963122546766806
+      },
+      {
+        "id": "TKT-0289",
+        "category": "Service Activation",
+        "subtopic": "VoLTE not enabled",
+        "similarity": 0.6861544099124512
+      },
+      {
+        "id": "TKT-0079",
+        "category": "Network/Connectivity",
+        "subtopic": "call drops",
+        "similarity": 0.683906407142085
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7208530834630895,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Push VoLTE profile to SIM",
+        "steps": "1) Verify the device model and plan eligibility 2) Access the provisioning system and push the latest VoLTE configuration to the subscriber's SIM 3) Instruct the customer to reboot the phone to apply changes",
+        "suitability": 82,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Refresh APN and network settings",
+        "steps": "1) Open the device's APN settings and set the APN to \"tnova.net\" 2) Save the changes and reset the network settings remotely 3) Confirm the VoLTE flag is active on the subscriber profile",
+        "suitability": 75,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Re‑provision VoLTE flag and detach/attach",
+        "steps": "1) Update the subscriber's HLR record to enable the VoLTE flag 2) Force a network detach and re‑attach on the device (or ask the customer to toggle airplane mode) 3) Verify VoLTE registration via a network probe",
+        "suitability": 69,
+        "llmScore": 70
+      }
+    ],
+    "top1Suitability": 82,
+    "judge": {
+      "top1Score": 4,
+      "bestOf3Score": 5,
+      "top1Useful": 4,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 is close to the real fix but not exact, and is a reasonable first step; solution #3 matches the real fix best and is the most useful."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 79,
+      "searchMs": 8,
+      "llmMs": 7241
+    }
+  },
+  {
+    "id": "TKT-0385",
+    "category": "SIM & Porting",
+    "subtopic": "port-out UPC code issue",
+    "description": "I am a repeat caller; after my first port-out attempt the UPC code was wrong, we tried again today and still get an error, need this fixed for my Nova 299 Lite plan in Indore.",
+    "realResolution": "Root cause: Duplicate pending port request blocked new UPC generation. Steps taken: 1) Cancelled the previous incomplete port request. 2) Forced generation of a fresh UPC code. 3) Sent the new UPC to the donor operator and confirmed acceptance. Outcome: Port-out finalized and number successfully transferred.",
+    "retrieved": [
+      {
+        "id": "TKT-0383",
+        "category": "SIM & Porting",
+        "subtopic": "port-out UPC code issue",
+        "similarity": 0.7468381238996921
+      },
+      {
+        "id": "TKT-0487",
+        "category": "SIM & Porting",
+        "subtopic": "port-out UPC code issue",
+        "similarity": 0.7438850784968913
+      },
+      {
+        "id": "TKT-0416",
+        "category": "SIM & Porting",
+        "subtopic": "port-out UPC code issue",
+        "similarity": 0.7202953574264218
+      },
+      {
+        "id": "TKT-0457",
+        "category": "SIM & Porting",
+        "subtopic": "port-out UPC code issue",
+        "similarity": 0.7161025530245836
+      },
+      {
+        "id": "TKT-0467",
+        "category": "SIM & Porting",
+        "subtopic": "port-out UPC code issue",
+        "similarity": 0.7060565119561807
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7468381238996921,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Manually generate correct UPC",
+        "steps": "1) Access the provisioning portal as admin 2) Generate a new valid 6‑digit UPC for the customer's port‑out request 3) Send the corrected UPC to the donor ISP and update the request in the system 4) Monitor the port‑out until completion",
+        "suitability": 91,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Update UPC generation template",
+        "steps": "1) Locate the UPC generation template in the system settings 2) Correct the placeholder or formatting rule causing invalid codes 3) Regenerate a fresh UPC for the customer 4) Communicate the new UPC to the customer for submission",
+        "suitability": 76,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Clear pending dues then regenerate UPC",
+        "steps": "1) Verify if any outstanding balance exists on the account 2) Clear any pending dues 3) Regenerate a valid UPC after the account is settled 4) Provide the new UPC to the customer and confirm acceptance with the destination carrier",
+        "suitability": 70,
+        "llmScore": 70
+      }
+    ],
+    "top1Suitability": 91,
+    "judge": {
+      "top1Score": 3,
+      "bestOf3Score": 3,
+      "top1Useful": 3,
+      "bestOf3Useful": 3,
+      "distinct": true,
+      "reason": "Solution #1 partly matches the real fix (generates a new UPC) but omits cancelling the pending request; it is a reasonable first step but not the complete correct action."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 99,
+      "searchMs": 5,
+      "llmMs": 8173
+    }
+  },
+  {
+    "id": "TKT-0400",
+    "category": "SIM & Porting",
+    "subtopic": "SIM card damaged",
+    "description": "i got a cracked sim card from teleNova and cant use it on my iPhone 13 in Lucknow plz send new one asap!!",
+    "realResolution": "Root cause: Physical damage to the SIM substrate caused read errors. Steps taken: 1) Deactivated the damaged SIM 2) Issued a replacement SIM and mailed it with tracking number 3) Activated the new SIM remotely Outcome: Customer now has a functional SIM and service restored.",
+    "retrieved": [
+      {
+        "id": "TKT-0464",
+        "category": "SIM & Porting",
+        "subtopic": "SIM card damaged",
+        "similarity": 0.743777363582837
+      },
+      {
+        "id": "TKT-0432",
+        "category": "SIM & Porting",
+        "subtopic": "SIM card damaged",
+        "similarity": 0.7355980151983944
+      },
+      {
+        "id": "TKT-0649",
+        "category": "Device/Handset",
+        "subtopic": "phone not detecting SIM",
+        "similarity": 0.7262714131769337
+      },
+      {
+        "id": "TKT-0474",
+        "category": "SIM & Porting",
+        "subtopic": "SIM card damaged",
+        "similarity": 0.7197465538538924
+      },
+      {
+        "id": "TKT-0443",
+        "category": "SIM & Porting",
+        "subtopic": "SIM card damaged",
+        "similarity": 0.7053506185099667
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.743777363582837,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Dispatch replacement SIM via courier",
+        "steps": "1) Log a damaged‑SIM case in the system 2) Deactivate the cracked SIM on the HLR to prevent misuse 3) Issue a new physical SIM and arrange priority prepaid courier delivery 4) Activate the new SIM on receipt and confirm service",
+        "suitability": 87,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Provide eSIM QR code replacement",
+        "steps": "1) Deactivate the damaged SIM on the network 2) Generate a replacement eSIM QR code linked to the same MSISDN 3) Send the QR code to the customer via secure email/SMS 4) Guide the customer to scan the QR code on the iPhone and verify activation",
+        "suitability": 81,
+        "llmScore": 81
+      },
+      {
+        "rank": 3,
+        "title": "Remote SIM re‑provisioning on device",
+        "steps": "1) Remove the existing SIM profile from the iPhone settings 2) Re‑provision the SIM through the TeleNova portal for the same number 3) Instruct the customer to restart the phone and check for network detection",
+        "suitability": 70,
+        "llmScore": 68
+      }
+    ],
+    "top1Suitability": 87,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 matches the actual replacement SIM fix and is the obvious first action; it is both accurate and sensible."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 48,
+      "searchMs": 9,
+      "llmMs": 8623
+    }
+  },
+  {
+    "id": "TKT-0419",
+    "category": "SIM & Porting",
+    "subtopic": "lost SIM",
+    "description": "i need a new sim asap i lost my old one while traveling in Jaipur cant wait plz send to my home address 9876543210",
+    "realResolution": "Root cause: Lost SIM required immediate deactivation to avoid fraud. Steps taken: 1) Deactivated the lost SIM instantly. 2) Processed a replacement SIM order with priority handling. 3) Dispatched the new SIM to the customer's home address with tracking. Outcome: Lost SIM blocked, replacement delivered, and service restored.",
+    "retrieved": [
+      {
+        "id": "TKT-0429",
+        "category": "SIM & Porting",
+        "subtopic": "lost SIM",
+        "similarity": 0.7421693912612511
+      },
+      {
+        "id": "TKT-0417",
+        "category": "SIM & Porting",
+        "subtopic": "lost SIM",
+        "similarity": 0.677563411133329
+      },
+      {
+        "id": "TKT-0437",
+        "category": "SIM & Porting",
+        "subtopic": "SIM swap request",
+        "similarity": 0.6608734849095469
+      },
+      {
+        "id": "TKT-0407",
+        "category": "SIM & Porting",
+        "subtopic": "lost SIM",
+        "similarity": 0.6565016528757841
+      },
+      {
+        "id": "TKT-0490",
+        "category": "SIM & Porting",
+        "subtopic": "lost SIM",
+        "similarity": 0.6391808779092734
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7421693912612511,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Emergency Express SIM Replacement",
+        "steps": "1) Block the reported lost SIM in the system to secure the account 2) Create a replacement SIM order with express courier shipping to the customer's home address 3) Perform remote activation of the new SIM once delivery is confirmed",
+        "suitability": 87,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Standard Replacement with Tracking",
+        "steps": "1) Deactivate the lost SIM to prevent misuse 2) Generate a new SIM linked to the same MSISDN 3) Dispatch the SIM via standard mail with tracking and inform the customer of the expected delivery date 4) Guide the customer through activation upon receipt",
+        "suitability": 76,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Temporary eSIM Provisioning",
+        "steps": "1) Block the lost physical SIM 2) Issue a temporary eSIM profile to the customer's device to maintain service 3) Process a physical SIM replacement order for later delivery 4) Instruct the customer on how to activate the eSIM and later switch to the new physical SIM",
+        "suitability": 53,
+        "llmScore": 45
+      }
+    ],
+    "top1Suitability": 87,
+    "judge": {
+      "top1Score": 4,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 closely matches the real fix but lacks the explicit priority handling, while solution #2 aligns perfectly; both are sensible actions, with #1 being a very appropriate first step."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 68,
+      "searchMs": 6,
+      "llmMs": 9529
+    }
+  },
+  {
+    "id": "TKT-0446",
+    "category": "SIM & Porting",
+    "subtopic": "number blocked after port",
+    "description": "After my number was ported from Vodafone on 5th Oct, it got blocked on my Redmi Note 12 in Guwahati. I cannot receive OTPs for banking, and the support portal says \"blocked\" without reason.",
+    "realResolution": "Root cause: Automated fraud filter mistakenly flagged the newly ported MSISDN. Steps taken: 1) Lifted the block flag in the fraud management console 2) Re-provisioned the subscriber profile with correct routing 3) Sent a test SMS and confirmed delivery Outcome: Number is unblocked and OTPs are received normally.",
+    "retrieved": [
+      {
+        "id": "TKT-0458",
+        "category": "SIM & Porting",
+        "subtopic": "number blocked after port",
+        "similarity": 0.7261464425827384
+      },
+      {
+        "id": "TKT-0414",
+        "category": "SIM & Porting",
+        "subtopic": "number blocked after port",
+        "similarity": 0.7135607951873473
+      },
+      {
+        "id": "TKT-0403",
+        "category": "SIM & Porting",
+        "subtopic": "number blocked after port",
+        "similarity": 0.7130276617813958
+      },
+      {
+        "id": "TKT-0488",
+        "category": "SIM & Porting",
+        "subtopic": "number blocked after port",
+        "similarity": 0.7068718313241407
+      },
+      {
+        "id": "TKT-0386",
+        "category": "SIM & Porting",
+        "subtopic": "number blocked after port",
+        "similarity": 0.6694259690710984
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7261464425827384,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Clear fraud flag and reset OTP routing",
+        "steps": "1) Access the HLR and locate the subscriber's MSISDN. 2) Remove any fraud detection flag marking the number as blocked. 3) Re‑enable the subscriber profile. 4) Reset the OTP routing rules to default. 5) Verify OTP delivery with a test transaction.",
+        "suitability": 89,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Remove block flag and reprovision voice profile",
+        "steps": "1) Open the subscriber database and find the blocked flag for the MSISDN. 2) Clear the block flag. 3) Re‑provision the VoLTE/voice service profile for the device. 4) Perform a test call and SMS to confirm service restoration.",
+        "suitability": 83,
+        "llmScore": 85
+      },
+      {
+        "rank": 3,
+        "title": "Reset OTP delivery and SMS service",
+        "steps": "1) Clear any temporary block in the security module. 2) Reset the OTP delivery profile for the subscriber. 3) Re‑provision the SMS service on the SIM. 4) Send a test OTP from the banking app to confirm receipt.",
+        "suitability": 78,
+        "llmScore": 78
+      }
+    ],
+    "top1Suitability": 89,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 matches the real fix (lifting fraud flag and reprovisioning) and is exactly what an experienced agent would try first."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 112,
+      "searchMs": 8,
+      "llmMs": 11294
+    }
+  },
+  {
+    "id": "TKT-0465",
+    "category": "SIM & Porting",
+    "subtopic": "SIM swap request",
+    "description": "i need a sim swap asap my nova 299 lite is on my old phone i cant use it anymore plz help",
+    "realResolution": "Root cause: customer requested SIM swap to a new device. Steps taken: 1) verified identity via OTP 2) deactivated old SIM and issued new eSIM QR code 3) guided customer to scan QR on new phone Outcome: SIM swapped and service active on the new device.",
+    "retrieved": [
+      {
+        "id": "TKT-0494",
+        "category": "SIM & Porting",
+        "subtopic": "SIM swap request",
+        "similarity": 0.7370750159455761
+      },
+      {
+        "id": "TKT-0471",
+        "category": "SIM & Porting",
+        "subtopic": "lost SIM",
+        "similarity": 0.6885204621297142
+      },
+      {
+        "id": "TKT-0423",
+        "category": "SIM & Porting",
+        "subtopic": "SIM swap request",
+        "similarity": 0.6713410348406539
+      },
+      {
+        "id": "TKT-0460",
+        "category": "SIM & Porting",
+        "subtopic": "lost SIM",
+        "similarity": 0.6603465916374366
+      },
+      {
+        "id": "TKT-0466",
+        "category": "SIM & Porting",
+        "subtopic": "SIM swap request",
+        "similarity": 0.6548296500764874
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7370750159455761,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Immediate SIM swap",
+        "steps": "1) Verify customer identity and MSISDN ownership 2) Deactivate the old SIM in the provisioning system 3) Activate the new SIM with the same subscriber profile 4) Send confirmation email with new SIM details",
+        "suitability": 85,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Lost SIM replacement",
+        "steps": "1) Confirm the SIM is unavailable and block it to prevent misuse 2) Generate a replacement SIM linked to the same account 3) Ship the new SIM to the customer's address with activation instructions 4) Activate the new SIM upon customer confirmation",
+        "suitability": 77,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Plan update without new SIM",
+        "steps": "1) Confirm the customer's MSISDN ownership 2) Update the subscription to the Nova 299 Lite plan in the billing system 3) Send a confirmation SMS with updated balance and plan details",
+        "suitability": 66,
+        "llmScore": 66
+      }
+    ],
+    "top1Suitability": 85,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 exactly matches the real SIM swap fix and is the obvious correct action for the request"
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 39,
+      "searchMs": 8,
+      "llmMs": 8508
+    }
+  },
+  {
+    "id": "TKT-0482",
+    "category": "SIM & Porting",
+    "subtopic": "port-in stuck",
+    "description": "On 12 Aug I tried porting my number from Airtel to Nova 299 Lite while using my Samsung Galaxy A54 in Pune, but the status has been 'pending' for three days and I still can't make calls.",
+    "realResolution": "Root cause: The port-in request was stuck due to an unprocessed verification flag in the HLR. Steps taken: 1) Reset the verification flag for the MSISDN in the provisioning system 2) Re-initiated the port-in request and forced a sync with the donor operator Outcome: The number successfully transferred and is now active on the Nova plan.",
+    "retrieved": [
+      {
+        "id": "TKT-0388",
+        "category": "SIM & Porting",
+        "subtopic": "port-in stuck",
+        "similarity": 0.7687439111792278
+      },
+      {
+        "id": "TKT-0410",
+        "category": "SIM & Porting",
+        "subtopic": "port-in stuck",
+        "similarity": 0.7594318394826164
+      },
+      {
+        "id": "TKT-0399",
+        "category": "SIM & Porting",
+        "subtopic": "port-in stuck",
+        "similarity": 0.7481538307803168
+      },
+      {
+        "id": "TKT-0520",
+        "category": "Roaming",
+        "subtopic": "incoming calls not received abroad",
+        "similarity": 0.717491190261652
+      },
+      {
+        "id": "TKT-0377",
+        "category": "SIM & Porting",
+        "subtopic": "port-in stuck",
+        "similarity": 0.7140650754605605
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7687439111792278,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Correct MSISDN Format and Re‑initiate Port",
+        "steps": "1) Verify the MSISDN is stored in the correct international format in the provisioning system. 2) Update the record if any mismatch is found. 3) Re‑initiate the port‑in request and force a status refresh in the portal. 4) Notify the originating carrier of the corrected details and monitor for completion.",
+        "suitability": 86,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Refresh HLR Mapping for the Number",
+        "steps": "1) Access the HLR database and locate the entry for the donor (Airtel) MSISDN. 2) Update the IMSI mapping to reflect the correct Nova subscriber profile. 3) Trigger a manual port‑in status refresh from the admin console. 4) Send a confirmation SMS to the customer once the port is active.",
+        "suitability": 81,
+        "llmScore": 81
+      },
+      {
+        "rank": 3,
+        "title": "Clear Pending Flag and Verify OTP",
+        "steps": "1) Open the port‑in gateway and clear any pending verification flag for the affected MSISDN. 2) Generate and resend a fresh OTP to the customer's device. 3) Guide the customer to enter the OTP and confirm verification. 4) Update the port‑in status to completed and verify service activation.",
+        "suitability": 74,
+        "llmScore": 73
+      }
+    ],
+    "top1Suitability": 86,
+    "judge": {
+      "top1Score": 3,
+      "bestOf3Score": 4,
+      "top1Useful": 3,
+      "bestOf3Useful": 4,
+      "distinct": true,
+      "reason": "Solution #1 partly aligns by re‑initiating the port but misses the verification flag reset; solution #3 directly addresses the pending verification flag, matching the real fix more closely and is a sensible action."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 94,
+      "searchMs": 5,
+      "llmMs": 9374
+    }
+  },
+  {
+    "id": "TKT-0504",
+    "category": "Roaming",
+    "subtopic": "roaming pack not applied",
+    "description": "I am a small-business owner, travelling from Indore to Singapore on 05-04-2024, and the NovaFiber 999 roaming pack I bought yesterday never showed up, leaving me with ₹2,199 unexpected roaming charges.",
+    "realResolution": "Root cause: Roaming pack purchase not linked to subscriber account due to transaction timeout. Steps taken: 1) Re-validated the purchase transaction ID 2) Manually attached the NovaFiber 999 roaming pack to the account 3) Applied a credit of ₹2,199 for the unauthorized usage Outcome: Pack is now active and future roaming will be billed at the pack rate.",
+    "retrieved": [
+      {
+        "id": "TKT-0555",
+        "category": "Roaming",
+        "subtopic": "roaming pack not applied",
+        "similarity": 0.7601816547985539
+      },
+      {
+        "id": "TKT-0515",
+        "category": "Roaming",
+        "subtopic": "roaming pack not applied",
+        "similarity": 0.7574649009928343
+      },
+      {
+        "id": "TKT-0174",
+        "category": "Billing",
+        "subtopic": "unexpected roaming charge",
+        "similarity": 0.7490083570133037
+      },
+      {
+        "id": "TKT-0165",
+        "category": "Billing",
+        "subtopic": "unexpected roaming charge",
+        "similarity": 0.7129140769513918
+      },
+      {
+        "id": "TKT-0195",
+        "category": "Billing",
+        "subtopic": "unexpected roaming charge",
+        "similarity": 0.711758645488306
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7601816547985539,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Manual roaming pack activation and refund",
+        "steps": "1) Verify the customer's account and purchase date of the NovaFiber 999 roaming pack. 2) Manually provision the roaming pack to the subscriber profile in the provisioning system. 3) Credit the unexpected ₹2,199 roaming charge back to the customer's balance. 4) Send a confirmation SMS/email to the customer confirming activation and refund.",
+        "suitability": 89,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Reset roaming entitlement flag in HLR",
+        "steps": "1) Access the HLR/Subscriber Management console for the customer's SIM. 2) Check the roaming entitlement flag for the NovaFiber 999 plan. 3) Reset or enable the roaming flag to the correct unlimited roaming setting. 4) Save changes and trigger a profile refresh on the device. 5) Verify that roaming is now active and monitor for any further charges.",
+        "suitability": 79,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Retroactive roaming exemption and billing adjustment",
+        "steps": "1) Review the customer's usage logs to identify charges incurred before the roaming pack activation. 2) Apply a retroactive roaming exemption for the period of travel. 3) Adjust the billing record to remove the unauthorized roaming fees. 4) Issue a credit for the removed amount and notify the customer of the correction.",
+        "suitability": 67,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 89,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 exactly mirrors the real fix and is the obvious first step an agent would take."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 97,
+      "searchMs": 9,
+      "llmMs": 9447
+    }
+  },
+  {
+    "id": "TKT-0537",
+    "category": "Roaming",
+    "subtopic": "data not working abroad",
+    "description": "i was in lucknow on my nova 599 and my data just stopped working?? no internet for 2 hours, tried turning airplane mode on and off but still nothing",
+    "realResolution": "Root cause: Temporary outage of the roaming gateway for the Lucknow region. Steps taken: 1) Routed the subscriber's traffic through an alternate gateway. 2) Updated the routing tables and refreshed the APN settings. Outcome: Data connectivity was restored and the customer could browse the web again.",
+    "retrieved": [
+      {
+        "id": "TKT-0960",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.6710056832859028
+      },
+      {
+        "id": "TKT-0073",
+        "category": "Network/Connectivity",
+        "subtopic": "broadband outage",
+        "similarity": 0.6578388525014818
+      },
+      {
+        "id": "TKT-0144",
+        "category": "Network/Connectivity",
+        "subtopic": "broadband outage",
+        "similarity": 0.648858549720707
+      },
+      {
+        "id": "TKT-0507",
+        "category": "Roaming",
+        "subtopic": "data not working abroad",
+        "similarity": 0.6410055903561904
+      },
+      {
+        "id": "TKT-0978",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.6307113041551995
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": false,
+    "subtopicHit5": true,
+    "topSimilarity": 0.6710056832859028,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Enable data service flag",
+        "steps": "1) Access the billing system backend 2) Verify the data plan activation flag for the SIM is set to active 3) Manually enable the flag if it is unset 4) Save changes and trigger a sync with the network",
+        "suitability": 80,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Reset APN to default",
+        "steps": "1) Open device Settings > Mobile Networks > Access Point Names 2) Delete any custom APN entries 3) Create a new APN with name \"tnova.net\" and default parameters 4) Save and select the new APN as active 5) Restart the device to apply changes",
+        "suitability": 73,
+        "llmScore": 80
+      },
+      {
+        "rank": 3,
+        "title": "Remote SIM re‑provision",
+        "steps": "1) Check carrier status for Lucknow to rule out a local outage 2) Submit a remote SIM re‑provision request in the provisioning system 3) Instruct the user to toggle airplane mode on and off after the request is processed 4) Verify data connectivity on the device",
+        "suitability": 68,
+        "llmScore": 70
+      }
+    ],
+    "top1Suitability": 80,
+    "judge": {
+      "top1Score": 1,
+      "bestOf3Score": 2,
+      "top1Useful": 2,
+      "bestOf3Useful": 4,
+      "distinct": true,
+      "reason": "Solution #1 does not match the actual gateway routing fix and is only a marginally sensible step, while solution #3, though not the exact fix, aligns with checking a regional outage and is the most useful of the three."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 62,
+      "searchMs": 6,
+      "llmMs": 7154
+    }
+  },
+  {
+    "id": "TKT-0581",
+    "category": "Roaming",
+    "subtopic": "roaming SMS OTP not received",
+    "description": "I am a college student on a semester exchange in Bangkok, using Nova 599 Unlimited. Every OTP for my college portal arrives late or not at all, causing me to miss deadlines.",
+    "realResolution": "Root cause: SMSC gateway filtering OTP messages due to mismatched sender ID. Steps taken: 1) Whitelisted the college portal's sender IDs in the SMSC. 2) Reset the OTP delivery queue for the subscriber. Outcome: OTPs are now received instantly while roaming.",
+    "retrieved": [
+      {
+        "id": "TKT-0296",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.5254428424436578
+      },
+      {
+        "id": "TKT-0278",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.5016316429945382
+      },
+      {
+        "id": "TKT-0923",
+        "category": "Complaint/Escalation",
+        "subtopic": "technician no-show",
+        "similarity": 0.5012993193917668
+      },
+      {
+        "id": "TKT-0256",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.5001331206349041
+      },
+      {
+        "id": "TKT-0322",
+        "category": "Service Activation",
+        "subtopic": "OTT add-on not active",
+        "similarity": 0.4985168796418909
+      }
+    ],
+    "categoryHit5": false,
+    "top1Category": false,
+    "subtopicHit5": false,
+    "topSimilarity": 0.5254428424436578,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Escalate OTP provisioning issue",
+        "steps": "1) Verify the subscriber's OTP service status in the provisioning system 2) If disabled or errored, re‑enable the OTP service flag 3) Trigger a manual OTP test to the customer's device and confirm receipt 4) Log the action and close the ticket if successful",
+        "suitability": 67,
+        "llmScore": 78
+      },
+      {
+        "rank": 2,
+        "title": "Apply temporary data boost while investigating",
+        "steps": "1) Grant a temporary data boost (e.g., 5 GB) to the customer's Nova 599 Unlimited plan 2) Inform the customer that OTP delays are being investigated and the boost ensures connectivity 3) Open an internal escalation to the SMS/OTP gateway team 4) Monitor OTP delivery for 24 hours and update the customer",
+        "suitability": 57,
+        "llmScore": 62
+      },
+      {
+        "rank": 3,
+        "title": "Reset network profile and resend OTP",
+        "steps": "1) Instruct the customer to reset network settings on their device 2) Verify the device registers on the correct APN for Nova 599 Unlimited 3) Ask the customer to request a new OTP and observe delivery 4) If issue persists, create a follow‑up ticket for deeper backend analysis",
+        "suitability": 50,
+        "llmScore": 48
+      }
+    ],
+    "top1Suitability": 67,
+    "judge": {
+      "top1Score": 2,
+      "bestOf3Score": 2,
+      "top1Useful": 3,
+      "bestOf3Useful": 3,
+      "distinct": true,
+      "reason": "Solution #1 only partly addresses the issue and is a reasonable first step."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 100,
+      "searchMs": 5,
+      "llmMs": 9596
+    }
+  },
+  {
+    "id": "TKT-0584",
+    "category": "Roaming",
+    "subtopic": "incoming calls not received abroad",
+    "description": "I am a senior citizen traveling from Lucknow to Dubai; my iPhone 13 rings continuously but I never get the incoming call audio, and I missed an important family call.",
+    "realResolution": "Root cause: VoLTE flag not provisioned for international roaming. Steps taken: 1) Checked HLR for VoLTE status 2) Reprovisioned VoLTE flag for the MSISDN 3) Performed a network detach/attach sequence Outcome: Incoming calls now ring normally and the missed call was recovered through call back.",
+    "retrieved": [
+      {
+        "id": "TKT-0547",
+        "category": "Roaming",
+        "subtopic": "incoming calls not received abroad",
+        "similarity": 0.642958744307309
+      },
+      {
+        "id": "TKT-0529",
+        "category": "Roaming",
+        "subtopic": "incoming calls not received abroad",
+        "similarity": 0.6009832100786558
+      },
+      {
+        "id": "TKT-0887",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.5982190513567051
+      },
+      {
+        "id": "TKT-0552",
+        "category": "Roaming",
+        "subtopic": "incoming calls not received abroad",
+        "similarity": 0.5910827906414954
+      },
+      {
+        "id": "TKT-0061",
+        "category": "Network/Connectivity",
+        "subtopic": "call drops",
+        "similarity": 0.5835755599239933
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.642958744307309,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Update roaming band profile",
+        "steps": "1) Access the subscriber's network profile in the provisioning system. 2) Update the iPhone 13 band configuration to include the roaming bands for the destination country. 3) Force a network re‑registration from the handset (restart or use the network reset option). 4) Verify inbound call routing with a test call.",
+        "suitability": 79,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Re‑provision VoLTE for roaming",
+        "steps": "1) Open the HLR/Subscriber Management console. 2) Enable the VoLTE flag for the subscriber's profile for international roaming. 3) Push the updated profile to the device and force a network re‑registration. 4) Confirm that incoming calls now ring with audio by placing a test inbound call.",
+        "suitability": 76,
+        "llmScore": 82
+      },
+      {
+        "rank": 3,
+        "title": "Clear DND and reset roaming profile",
+        "steps": "1) Check the subscriber profile for a Do‑Not‑Disturb (DND) flag set during roaming. 2) Clear the DND flag in the network database. 3) Reset the device's roaming profile settings remotely. 4) Instruct the customer to verify that DND is disabled on the handset and test an incoming call.",
+        "suitability": 66,
+        "llmScore": 70
+      }
+    ],
+    "top1Suitability": 79,
+    "judge": {
+      "top1Score": 1,
+      "bestOf3Score": 5,
+      "top1Useful": 2,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 doesn't address VoLTE provisioning, but is a plausible albeit less relevant step; solution #2 matches the real fix and is the most useful."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 64,
+      "searchMs": 13,
+      "llmMs": 8388
+    }
+  },
+  {
+    "id": "TKT-0591",
+    "category": "Roaming",
+    "subtopic": "no network abroad",
+    "description": "my phone shows no network in guwahati after landing, plan is nova 599 unlimited, need help plz",
+    "realResolution": "Root cause: Network selection stuck on previous MCC. Steps taken: 1) Sent a remote network scan command 2) Forced manual network selection to the local operator 3) Confirmed signal lock and data session Outcome: Device now registers on the Guwahati network and services are functional.",
+    "retrieved": [
+      {
+        "id": "TKT-0574",
+        "category": "Roaming",
+        "subtopic": "no network abroad",
+        "similarity": 0.756098260683693
+      },
+      {
+        "id": "TKT-0507",
+        "category": "Roaming",
+        "subtopic": "data not working abroad",
+        "similarity": 0.7463858626590474
+      },
+      {
+        "id": "TKT-0566",
+        "category": "Roaming",
+        "subtopic": "data not working abroad",
+        "similarity": 0.7257650253697464
+      },
+      {
+        "id": "TKT-0517",
+        "category": "Roaming",
+        "subtopic": "data not working abroad",
+        "similarity": 0.712071214008857
+      },
+      {
+        "id": "TKT-0358",
+        "category": "Service Activation",
+        "subtopic": "new SIM not activated",
+        "similarity": 0.6930868439375815
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.756098260683693,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Enable Roaming for Nova 599",
+        "steps": "1) Verify the customer's account has roaming enabled in the CRM; 2) Activate roaming for the Nova 599 Unlimited tier; 3) Push a profile refresh to the device; 4) Ask the customer to restart the phone and confirm network appears",
+        "suitability": 83,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Remote SIM Re‑provision & Airplane Toggle",
+        "steps": "1) Check the local carrier status for Guwahati; 2) Send a remote SIM re‑provision request from the provisioning system; 3) Instruct the customer to enable Airplane mode for 30 seconds then disable it; 4) Verify network and data connectivity",
+        "suitability": 78,
+        "llmScore": 80
+      },
+      {
+        "rank": 3,
+        "title": "Update Roaming APN Settings",
+        "steps": "1) Send a remote configuration to set the roaming APN to \"tnova.net\" for the device; 2) Reset the phone's network settings remotely; 3) Prompt the customer to reboot the device; 4) Confirm data works in Guwahati",
+        "suitability": 77,
+        "llmScore": 75
+      }
+    ],
+    "top1Suitability": 83,
+    "judge": {
+      "top1Score": 2,
+      "bestOf3Score": 2,
+      "top1Useful": 4,
+      "bestOf3Useful": 4,
+      "distinct": true,
+      "reason": "Solution #1 only loosely relates to the real fix and is not the actual action, but enabling roaming is a reasonable first attempt."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 58,
+      "searchMs": 6,
+      "llmMs": 7251
+    }
+  },
+  {
+    "id": "TKT-0624",
+    "category": "Roaming",
+    "subtopic": "high roaming bill",
+    "description": "I was charged ₹9,800 for a short weekend trip to Mumbai while on my Nova 299 Lite plan, even though I only used 150 MB. This is unacceptable and I demand a refund.",
+    "realResolution": "Root cause: Incorrect tariff mapping applied to the roaming zone, charging post-paid rates instead of the plan's roaming rates. Steps taken: 1) Corrected the tariff code for the Mumbai roaming zone. 2) Recalculated the bill and issued a credit of ₹9,150 with reference REF55432. 3) Added a monitoring rule to ensure correct tariff application. Outcome: Adjusted bill reflects ₹650 usage, and the customer received a refund confirmation email.",
+    "retrieved": [
+      {
+        "id": "TKT-0539",
+        "category": "Roaming",
+        "subtopic": "high roaming bill",
+        "similarity": 0.7194347173127335
+      },
+      {
+        "id": "TKT-0215",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.6992585122815382
+      },
+      {
+        "id": "TKT-0610",
+        "category": "Roaming",
+        "subtopic": "high roaming bill",
+        "similarity": 0.6964884094263823
+      },
+      {
+        "id": "TKT-0156",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.6939353043776585
+      },
+      {
+        "id": "TKT-0197",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.6925295095572085
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7194347173127335,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Apply Correct Roaming Pack",
+        "steps": "1) Verify the customer's roaming usage period in the system 2) Apply the Nova 299 Lite roaming pack retroactively to that period 3) Recalculate the charges and issue a refund for the excess amount 4) Update the bill to reflect the correct ₹1,200 roaming charge",
+        "suitability": 84,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Correct Billing Rule Mapping",
+        "steps": "1) Review the customer's tariff mapping in the billing engine 2) Identify any misapplied plan codes causing out‑of‑pack rates 3) Update the mapping to the correct Nova 299 Lite roaming rates 4) Re‑run the billing cycle for the affected invoice and credit the overcharge",
+        "suitability": 75,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Validate Usage Records and Credit",
+        "steps": "1) Extract the detailed roaming data usage records for the trip 2) Compare the recorded usage against the plan's free data allowance 3) Remove any charges that exceed the allowance and generate a credit note 4) Notify the customer of the corrected bill",
+        "suitability": 70,
+        "llmScore": 71
+      }
+    ],
+    "top1Suitability": 84,
+    "judge": {
+      "top1Score": 3,
+      "bestOf3Score": 5,
+      "top1Useful": 4,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 partially aligns with the real fix by adjusting charges, but doesn’t address the root tariff mapping; it’s still a reasonable first step, while solution #2 directly matches the actual resolution."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 41,
+      "searchMs": 4,
+      "llmMs": 8422
+    }
+  },
+  {
+    "id": "TKT-0631",
+    "category": "Device/Handset",
+    "subtopic": "hotspot not working",
+    "description": "Senior citizen from Guwahati with a Samsung Galaxy A54 on Nova 299 Lite tries to enable hotspot for his grandson's tablet, but the hotspot never appears to other devices and shows 'Unable to start hotspot' error.",
+    "realResolution": "Root cause: Disabled tethering flag on subscriber profile. Steps taken: 1) Enabled hotspot feature on HLR for the line. 2) Reset network settings on the phone. 3) Confirmed hotspot visibility and successful connection to a test device. Outcome: Hotspot now functions and grandson can browse the internet.",
+    "retrieved": [
+      {
+        "id": "TKT-0669",
+        "category": "Device/Handset",
+        "subtopic": "hotspot not working",
+        "similarity": 0.7672439138642912
+      },
+      {
+        "id": "TKT-0680",
+        "category": "Device/Handset",
+        "subtopic": "hotspot not working",
+        "similarity": 0.7611735693979967
+      },
+      {
+        "id": "TKT-0707",
+        "category": "Device/Handset",
+        "subtopic": "hotspot not working",
+        "similarity": 0.7137993452089639
+      },
+      {
+        "id": "TKT-0716",
+        "category": "Device/Handset",
+        "subtopic": "hotspot not working",
+        "similarity": 0.7084473761720297
+      },
+      {
+        "id": "TKT-0690",
+        "category": "Device/Handset",
+        "subtopic": "hotspot not working",
+        "similarity": 0.7008108854033218
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7672439138642912,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Update carrier configuration",
+        "steps": "1) Download the latest carrier configuration file for Nova 299 Lite. 2) Install the file on the Samsung Galaxy A54 via Settings > About phone > Update carrier settings. 3) Reset network settings and reboot the device. 4) Re‑enable the hotspot and test with another device.",
+        "suitability": 83,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Enable hotspot flag in SIM profile",
+        "steps": "1) Access the carrier provisioning portal or contact the provisioning team. 2) Verify that the hotspot service flag is set to enabled for the subscriber's SIM. 3) Apply the change and ask the customer to toggle the hotspot off and on. 4) Confirm that the hotspot SSID appears and devices can connect.",
+        "suitability": 81,
+        "llmScore": 84
+      },
+      {
+        "rank": 3,
+        "title": "Clear hotspot configuration cache",
+        "steps": "1) Connect the phone to a PC and open a command prompt with ADB. 2) Execute \"adb shell pm clear com.android.settings\" to clear hotspot cache. 3) Re‑enable hotspot tethering in Settings and update the carrier profile if prompted. 4) Test the hotspot with a secondary device to ensure connectivity.",
+        "suitability": 75,
+        "llmScore": 78
+      }
+    ],
+    "top1Suitability": 83,
+    "judge": {
+      "top1Score": 2,
+      "bestOf3Score": 5,
+      "top1Useful": 3,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 only partially aligns with the real fix and is a moderate first‑step, while solution #2 directly matches the actual resolution and is the most useful."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 52,
+      "searchMs": 2,
+      "llmMs": 9515
+    }
+  },
+  {
+    "id": "TKT-0635",
+    "category": "Device/Handset",
+    "subtopic": "router/ONT red light",
+    "description": "Angry about the red light on my NovaFiber 999 ONT in Indore, the router has been offline for hours and my home office can't connect, I'm losing client meetings and I might post this on social media.",
+    "realResolution": "Root cause: Power supply fault causing ONT to enter fault state. Steps taken: 1) Dispatched technician to replace faulty power adapter. 2) Reset ONT and performed line sync. 3) Verified internet connectivity on multiple devices. Outcome: Red light cleared, internet restored, client meetings can proceed.",
+    "retrieved": [
+      {
+        "id": "TKT-0700",
+        "category": "Device/Handset",
+        "subtopic": "router/ONT red light",
+        "similarity": 0.8144990304136241
+      },
+      {
+        "id": "TKT-0664",
+        "category": "Device/Handset",
+        "subtopic": "router/ONT red light",
+        "similarity": 0.8032790310638893
+      },
+      {
+        "id": "TKT-0737",
+        "category": "Device/Handset",
+        "subtopic": "router/ONT red light",
+        "similarity": 0.7988504747580516
+      },
+      {
+        "id": "TKT-0683",
+        "category": "Device/Handset",
+        "subtopic": "router/ONT red light",
+        "similarity": 0.7867142692018861
+      },
+      {
+        "id": "TKT-0644",
+        "category": "Device/Handset",
+        "subtopic": "router/ONT red light",
+        "similarity": 0.7786181772098767
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.8144990304136241,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Replace ONT Power Adapter",
+        "steps": "1) Dispatch a technician to the site. 2) Replace the ONT power supply with a verified unit. 3) Reboot the ONT and verify optical power levels. 4) Confirm internet connectivity on all LAN ports.",
+        "suitability": 88,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Rollback ONT Firmware",
+        "steps": "1) Remotely access the ONT via NOC. 2) Perform a firmware rollback to the last stable version. 3) Reset the ONT to factory defaults and re‑provision VLAN settings. 4) Run a connectivity test to ensure service is restored.",
+        "suitability": 80,
+        "llmScore": 80
+      },
+      {
+        "rank": 3,
+        "title": "Remote Sync and Power Cycle",
+        "steps": "1) Instruct the customer to power‑cycle the ONT and wait two minutes. 2) Send a remote synchronization command from the NOC to re‑authenticate the ONT with the OLT. 3) Verify the status LED turns green and test internet access.",
+        "suitability": 73,
+        "llmScore": 70
+      }
+    ],
+    "top1Suitability": 88,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 exactly matches the real fix and is the most sensible first step."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 34,
+      "searchMs": 4,
+      "llmMs": 9382
+    }
+  },
+  {
+    "id": "TKT-0660",
+    "category": "Device/Handset",
+    "subtopic": "APN settings wrong",
+    "description": "Plan Nova 599 Unlimited on my Samsung Galaxy A54 gave me no data after the recent update, I think the APN got reset on 5th Oct in Indore, please fix it quickly.",
+    "realResolution": "Root cause: APN reset during OTA update. Steps taken: 1) Instructed user to navigate to mobile network settings. 2) Re-entered APN \"tnova.net\" with default credentials. 3) Verified data connectivity after reboot. Outcome: Data service restored and user confirmed internet speed is normal.",
+    "retrieved": [
+      {
+        "id": "TKT-0978",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.7967499371688013
+      },
+      {
+        "id": "TKT-0725",
+        "category": "Device/Handset",
+        "subtopic": "APN settings wrong",
+        "similarity": 0.778561977494726
+      },
+      {
+        "id": "TKT-0918",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.7527187810430159
+      },
+      {
+        "id": "TKT-0847",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.7479580831789746
+      },
+      {
+        "id": "TKT-0968",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.7402429691387447
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": false,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7967499371688013,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Reset APN to tnova.net",
+        "steps": "1) Open Settings > Mobile Networks > Access Point Names. 2) Delete existing APN entries. 3) Add a new APN named \"tnova.net\" with default fields. 4) Save and reboot the device.",
+        "suitability": 90,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Re‑provision VoLTE flag on HLR",
+        "steps": "1) Verify the subscriber’s SIM is active in the HLR. 2) Update the VoLTE provisioning flag for the SIM to enabled. 3) Force a profile refresh by sending a remote reset command. 4) Instruct the user to restart the phone and re‑register to the network.",
+        "suitability": 81,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Trigger backend plan refresh",
+        "steps": "1) Locate the subscriber’s account in the provisioning system. 2) Re‑trigger the plan change API for Nova 599 Unlimited. 3) Refresh the subscriber profile on the HLR and ensure the APN is set to \"tnova.net\". 4) Ask the user to power‑cycle the device and verify data connectivity.",
+        "suitability": 73,
+        "llmScore": 71
+      }
+    ],
+    "top1Suitability": 90,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 exactly matches the real fix and is the obvious first step an agent would take."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 56,
+      "searchMs": 3,
+      "llmMs": 8311
+    }
+  },
+  {
+    "id": "TKT-0694",
+    "category": "Device/Handset",
+    "subtopic": "device locked to network",
+    "description": "After switching to Nova 599 Unlimited, my iPhone 13 still says 'SIM not supported' in Mumbai; I think it's still tied to the previous operator and I'm frustrated!!",
+    "realResolution": "Root cause: Carrier lock not cleared after plan migration. Steps taken: 1) Verified lock status via carrier database and initiated unlock process. 2) Sent unlock confirmation and updated device profile. 3) Guided customer to reinsert SIM and reboot. Outcome: Device now accepts the new SIM and service is active.",
+    "retrieved": [
+      {
+        "id": "TKT-0721",
+        "category": "Device/Handset",
+        "subtopic": "device locked to network",
+        "similarity": 0.7806102193608905
+      },
+      {
+        "id": "TKT-0739",
+        "category": "Device/Handset",
+        "subtopic": "device locked to network",
+        "similarity": 0.7290572194609274
+      },
+      {
+        "id": "TKT-0347",
+        "category": "Service Activation",
+        "subtopic": "new SIM not activated",
+        "similarity": 0.7256595638822821
+      },
+      {
+        "id": "TKT-0665",
+        "category": "Device/Handset",
+        "subtopic": "device locked to network",
+        "similarity": 0.7104223267437909
+      },
+      {
+        "id": "TKT-0337",
+        "category": "Service Activation",
+        "subtopic": "new SIM not activated",
+        "similarity": 0.7056767205957741
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7806102193608905,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Re‑provision SIM and reset iPhone",
+        "steps": "1) Verify the SIM ICCID in the HLR and re‑provision the Nova 599 profile; 2) Instruct the customer to reset network settings on the iPhone (Settings → General → Reset → Reset Network Settings); 3) Ask the user to restart the device and confirm network registration",
+        "suitability": 86,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Unlock carrier lock on iPhone",
+        "steps": "1) Check the device IMEI for a carrier‑lock flag; 2) Submit an unlock request to the provisioning system and apply the unlock code; 3) Guide the customer to power‑cycle the iPhone, insert the Nova SIM, and verify service",
+        "suitability": 80,
+        "llmScore": 81
+      },
+      {
+        "rank": 3,
+        "title": "Correct HLR profile and refresh network",
+        "steps": "1) Review the SIM record in the HLR for missing or incorrect IMSI mapping; 2) Update the HLR entry to match the Nova 599 Unlimited plan; 3) Send a network refresh command to the device and have the customer reboot the iPhone",
+        "suitability": 75,
+        "llmScore": 73
+      }
+    ],
+    "top1Suitability": 86,
+    "judge": {
+      "top1Score": 2,
+      "bestOf3Score": 5,
+      "top1Useful": 3,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 only partially addresses the issue, while #2 aligns with the actual fix; both are sensible, with #2 being the optimal approach."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 54,
+      "searchMs": 2,
+      "llmMs": 8578
+    }
+  },
+  {
+    "id": "TKT-0699",
+    "category": "Device/Handset",
+    "subtopic": "VoWiFi not working",
+    "description": "I am a senior citizen in Guwahati, trying to use VoWiFi on my Samsung Galaxy A54, but every time I attempt a call it just says \"Calling...\" and hangs up.",
+    "realResolution": "Root cause: Device firmware lacked the latest VoWiFi patch. Steps taken: 1) Directed user to install the latest OTA update for the Galaxy A54. 2) Verified VoWiFi toggle enabled and performed a test call. Outcome: VoWiFi calls now complete successfully.",
+    "retrieved": [
+      {
+        "id": "TKT-0652",
+        "category": "Device/Handset",
+        "subtopic": "VoWiFi not working",
+        "similarity": 0.7679802843101075
+      },
+      {
+        "id": "TKT-0718",
+        "category": "Device/Handset",
+        "subtopic": "VoWiFi not working",
+        "similarity": 0.7657158592154011
+      },
+      {
+        "id": "TKT-0633",
+        "category": "Device/Handset",
+        "subtopic": "VoWiFi not working",
+        "similarity": 0.7575108880297541
+      },
+      {
+        "id": "TKT-0736",
+        "category": "Device/Handset",
+        "subtopic": "VoWiFi not working",
+        "similarity": 0.735490246063481
+      },
+      {
+        "id": "TKT-0663",
+        "category": "Device/Handset",
+        "subtopic": "VoWiFi not working",
+        "similarity": 0.7285014432599216
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7679802843101075,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Restore VoWiFi service flag",
+        "steps": "1) Verify subscriber record in HLR for VoWiFi flag; 2) Reactivate the VoWiFi flag if cleared; 3) Force the device to re‑register for Wi‑Fi calling; 4) Perform a test call to confirm connectivity",
+        "suitability": 86,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Rollback firmware and reprovision profile",
+        "steps": "1) Check device firmware version; 2) Downgrade to the previous stable firmware release; 3) Re‑provision VoWiFi settings on the HLR; 4) Reset network settings on the phone and test a call",
+        "suitability": 79,
+        "llmScore": 80
+      },
+      {
+        "rank": 3,
+        "title": "Correct APN and DNS configuration",
+        "steps": "1) Open mobile network settings and edit the VoWiFi APN to \"tnova.net\"; 2) Add the required DNS servers as per Nova guidelines; 3) Restart the device; 4) Place a test VoWiFi call to verify stability",
+        "suitability": 71,
+        "llmScore": 70
+      }
+    ],
+    "top1Suitability": 86,
+    "judge": {
+      "top1Score": 1,
+      "bestOf3Score": 1,
+      "top1Useful": 2,
+      "bestOf3Useful": 3,
+      "distinct": true,
+      "reason": "Solution #1 does not address the firmware issue (score 1) and is only a marginally sensible first step, while among the three, the APN/DNS fix is the most generally useful."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 66,
+      "searchMs": 7,
+      "llmMs": 9394
+    }
+  },
+  {
+    "id": "TKT-0741",
+    "category": "Device/Handset",
+    "subtopic": "phone not detecting SIM",
+    "description": "I am a college student in Pune using a Samsung Galaxy A54 on Nova 599 Unlimited, and the device suddenly stopped recognizing my new SIM after I switched from prepaid. I tried restarting but the SIM icon never appears, and I need it for my online classes.",
+    "realResolution": "Root cause: SIM slot hardware contact failure due to dust. Steps taken: 1) Guided user to clean SIM tray with compressed air. 2) Re-inserted SIM and performed a soft reset. Outcome: Device now detects SIM and network registers successfully.",
+    "retrieved": [
+      {
+        "id": "TKT-0666",
+        "category": "Device/Handset",
+        "subtopic": "phone not detecting SIM",
+        "similarity": 0.8085750559004153
+      },
+      {
+        "id": "TKT-0704",
+        "category": "Device/Handset",
+        "subtopic": "phone not detecting SIM",
+        "similarity": 0.7949925452286202
+      },
+      {
+        "id": "TKT-0657",
+        "category": "Device/Handset",
+        "subtopic": "phone not detecting SIM",
+        "similarity": 0.7913063197194699
+      },
+      {
+        "id": "TKT-0648",
+        "category": "Device/Handset",
+        "subtopic": "phone not detecting SIM",
+        "similarity": 0.7863820765964291
+      },
+      {
+        "id": "TKT-0695",
+        "category": "Device/Handset",
+        "subtopic": "phone not detecting SIM",
+        "similarity": 0.7852334824518721
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.8085750559004153,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Re‑flash modem firmware",
+        "steps": "1) Open device diagnostics and confirm SIM status 2) Download the latest modem firmware for the Galaxy A54 from the official source 3) Re‑flash the modem firmware using the provided tool 4) Power on the device and re‑insert the SIM to verify detection",
+        "suitability": 88,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Clean SIM slot contacts",
+        "steps": "1) Power off the phone and remove the SIM tray 2) Gently clean the SIM contacts and tray pins with a soft cloth or compressed air 3) Re‑insert the SIM securely 4) Power on the device and check for network bars",
+        "suitability": 81,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Update firmware and reset network",
+        "steps": "1) Verify the device is running the latest OS version 2) Update the phone firmware to the newest release 3) Reset network settings from Settings > General Management > Reset 4) Re‑insert the SIM and confirm network registration",
+        "suitability": 74,
+        "llmScore": 71
+      }
+    ],
+    "top1Suitability": 88,
+    "judge": {
+      "top1Score": 1,
+      "bestOf3Score": 5,
+      "top1Useful": 2,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 does not match the actual fix and is not a sensible first step, while solution #2 aligns with the real resolution and is the most appropriate action."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 92,
+      "searchMs": 3,
+      "llmMs": 9382
+    }
+  },
+  {
+    "id": "TKT-0786",
+    "category": "Plan Change",
+    "subtopic": "downgrade request blocked",
+    "description": "I tried to downgrade from Nova 599 Unlimited to Nova 299 Lite yesterday in Lucknow using my iPhone 13, but the system kept rejecting my request and said \"downgrade not allowed\" even though my contract ended on 30th Sep.",
+    "realResolution": "Root cause: contract end date not updated in CRM. Steps taken: 1) updated contract termination date in subscriber record. 2) re-initiated downgrade request through provisioning engine. 3) forced a tariff switch on HLR and cleared pending downgrade flag. Outcome: downgrade processed successfully and new plan activated on 01 Oct with correct billing.",
+    "retrieved": [
+      {
+        "id": "TKT-0806",
+        "category": "Plan Change",
+        "subtopic": "downgrade request blocked",
+        "similarity": 0.7977384960223852
+      },
+      {
+        "id": "TKT-0854",
+        "category": "Plan Change",
+        "subtopic": "downgrade request blocked",
+        "similarity": 0.7639013477227596
+      },
+      {
+        "id": "TKT-0775",
+        "category": "Plan Change",
+        "subtopic": "downgrade request blocked",
+        "similarity": 0.7593929164924302
+      },
+      {
+        "id": "TKT-0838",
+        "category": "Plan Change",
+        "subtopic": "downgrade request blocked",
+        "similarity": 0.7521899567294525
+      },
+      {
+        "id": "TKT-0796",
+        "category": "Plan Change",
+        "subtopic": "downgrade request blocked",
+        "similarity": 0.7374936353577202
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7977384960223852,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Remove promotional lock",
+        "steps": "1) Verify the account for any active promotional lock flags. 2) Remove the promotional lock from the eligibility engine. 3) Manually process the downgrade request and update the tariff code. 4) Confirm the new plan activation with the customer.",
+        "suitability": 89,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Clear pending promotional credit",
+        "steps": "1) Check the account for any pending promotional credit or credit hold. 2) Clear the promotional credit flag in the billing system. 3) Re‑submit the downgrade request manually. 4) Send confirmation of the new Nova 299 Lite plan to the customer.",
+        "suitability": 81,
+        "llmScore": 84
+      },
+      {
+        "rank": 3,
+        "title": "Adjust postpaid bundle flag",
+        "steps": "1) Inspect the HLR/profile for residual postpaid bundle flags. 2) Remove any incorrect postpaid bundle flag affecting downgrade eligibility. 3) Update the downgrade eligibility criteria for the account. 4) Process the downgrade manually and notify the customer of completion.",
+        "suitability": 77,
+        "llmScore": 78
+      }
+    ],
+    "top1Suitability": 89,
+    "judge": {
+      "top1Score": 2,
+      "bestOf3Score": 2,
+      "top1Useful": 3,
+      "bestOf3Useful": 3,
+      "distinct": true,
+      "reason": "Solution #1 targets a promotional lock, not the contract date error that caused the downgrade failure, but checking locks is a reasonable initial step."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 53,
+      "searchMs": 3,
+      "llmMs": 8608
+    }
+  },
+  {
+    "id": "TKT-0789",
+    "category": "Plan Change",
+    "subtopic": "family plan member add",
+    "description": "pls add my brother to my Nova 299 Lite family pack in Kochi his number is 98765xxxx, he cant see any data yet",
+    "realResolution": "Root cause: missing member entry in family plan table. Steps taken: 1) added brother's MSISDN to family plan roster. 2) allocated shared data quota to his line. 3) sent push notification to refresh plan details. Outcome: brother now sees the shared data and can start using it.",
+    "retrieved": [
+      {
+        "id": "TKT-0842",
+        "category": "Plan Change",
+        "subtopic": "family plan member add",
+        "similarity": 0.6553467153088539
+      },
+      {
+        "id": "TKT-0850",
+        "category": "Plan Change",
+        "subtopic": "family plan member add",
+        "similarity": 0.6054686101658784
+      },
+      {
+        "id": "TKT-0777",
+        "category": "Plan Change",
+        "subtopic": "family plan member add",
+        "similarity": 0.5750535857107599
+      },
+      {
+        "id": "TKT-0769",
+        "category": "Plan Change",
+        "subtopic": "family plan member add",
+        "similarity": 0.5568170794199856
+      },
+      {
+        "id": "TKT-0815",
+        "category": "Plan Change",
+        "subtopic": "family plan member add",
+        "similarity": 0.5375731782996699
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.6553467153088539,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Add member with KYC verification",
+        "steps": "1) Retrieve the brother's ID documents and verify them in the CRM. 2) Create a new member profile using his MSISDN. 3) Assign the profile to the Nova 299 Lite family group and provision shared data. 4) Send a confirmation SMS to both parties.",
+        "suitability": 80,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Add member after address verification",
+        "steps": "1) Request and validate the brother's address proof for Kochi. 2) Update the family plan roster with his number. 3) Allocate the appropriate data share for the Nova 299 Lite plan. 4) Notify the customer via SMS that the addition is complete.",
+        "suitability": 71,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Add member via API token execution",
+        "steps": "1) Collect the brother's identity details and generate a member verification token. 2) Execute the family‑plan addition API using the token and his MSISDN. 3) Confirm the line is active and data sharing is enabled. 4) Send a confirmation SMS to the customer.",
+        "suitability": 65,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 80,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 matches the actual fix and is the obvious sensible first action."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 55,
+      "searchMs": 4,
+      "llmMs": 9386
+    }
+  },
+  {
+    "id": "TKT-0828",
+    "category": "Plan Change",
+    "subtopic": "benefits missing after change",
+    "description": "After moving from Nova 299 Lite to Nova 599 Unlimited on 20 Oct, I noticed the complimentary OTT subscription for Disney+ Hotstar is not showing up on my account, even though I'm in Lucknow and paid the extra ₹250.",
+    "realResolution": "Root cause: The OTT entitlement flag was not set during the plan transition. Steps taken: 1) Updated the entitlement table with the Disney+ Hotstar flag for the subscriber. 2) Triggered a profile sync with the OTT partner API. 3) Confirmed activation via the customer portal. Outcome: The Disney+ Hotstar benefit is now visible and usable on the customer's app.",
+    "retrieved": [
+      {
+        "id": "TKT-0308",
+        "category": "Service Activation",
+        "subtopic": "OTT add-on not active",
+        "similarity": 0.7222811488609856
+      },
+      {
+        "id": "TKT-0368",
+        "category": "Service Activation",
+        "subtopic": "OTT add-on not active",
+        "similarity": 0.7175668997181258
+      },
+      {
+        "id": "TKT-0767",
+        "category": "Plan Change",
+        "subtopic": "benefits missing after change",
+        "similarity": 0.7154156049944591
+      },
+      {
+        "id": "TKT-0290",
+        "category": "Service Activation",
+        "subtopic": "OTT add-on not active",
+        "similarity": 0.7140746473786689
+      },
+      {
+        "id": "TKT-0322",
+        "category": "Service Activation",
+        "subtopic": "OTT add-on not active",
+        "similarity": 0.713091775466611
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": false,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7222811488609856,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Force OTT API sync",
+        "steps": "1) Verify the OTT add‑on purchase in the billing system 2) Initiate a manual sync request to the OTT partner API 3) Confirm activation status on the customer portal",
+        "suitability": 85,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Manually link OTT entitlement",
+        "steps": "1) Locate the payment transaction for the OTT add‑on 2) Manually associate the OTT entitlement with the subscriber's profile in the billing system 3) Refresh the OTT portal cache and verify access",
+        "suitability": 81,
+        "llmScore": 82
+      },
+      {
+        "rank": 3,
+        "title": "Update OTT entitlement flag",
+        "steps": "1) Review the subscriber's plan change record 2) Add the OTT entitlement flag to the subscriber's entitlement record 3) Send a push notification confirming activation and verify on the device",
+        "suitability": 75,
+        "llmScore": 78
+      }
+    ],
+    "top1Suitability": 85,
+    "judge": {
+      "top1Score": 3,
+      "bestOf3Score": 5,
+      "top1Useful": 3,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 only syncs, missing flag update; solution #3 matches real fix and is the most sensible first action."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 68,
+      "searchMs": 4,
+      "llmMs": 8263
+    }
+  },
+  {
+    "id": "TKT-0832",
+    "category": "Plan Change",
+    "subtopic": "prepaid to postpaid migration",
+    "description": "I am a senior citizen in Lucknow, migrated from prepaid 199 to postpaid Nova 299 Lite on 15 Sep, but the postpaid bill still shows ₹0 and I cannot use the postpaid benefits.",
+    "realResolution": "Root cause: The billing cycle was not initiated for the newly created postpaid account. Steps taken: 1) Activated the postpaid billing cycle in the billing engine. 2) Re-provisioned the subscriber profile to enable postpaid features. 3) Generated a provisional invoice for the current cycle. Outcome: The bill now reflects the correct amount and all postpaid benefits are functional.",
+    "retrieved": [
+      {
+        "id": "TKT-0844",
+        "category": "Plan Change",
+        "subtopic": "prepaid to postpaid migration",
+        "similarity": 0.7874186882623069
+      },
+      {
+        "id": "TKT-0791",
+        "category": "Plan Change",
+        "subtopic": "prepaid to postpaid migration",
+        "similarity": 0.7844471094566055
+      },
+      {
+        "id": "TKT-0874",
+        "category": "Plan Change",
+        "subtopic": "prepaid to postpaid migration",
+        "similarity": 0.7514249417694588
+      },
+      {
+        "id": "TKT-0803",
+        "category": "Plan Change",
+        "subtopic": "prepaid to postpaid migration",
+        "similarity": 0.7461618519777601
+      },
+      {
+        "id": "TKT-0864",
+        "category": "Plan Change",
+        "subtopic": "prepaid to postpaid migration",
+        "similarity": 0.7069996394772734
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7874186882623069,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Complete KYC and Activate Postpaid",
+        "steps": "1) Open the customer profile and check KYC status. 2) Request any missing ID documents and verify them. 3) Clear the KYC pending flag and trigger postpaid line activation. 4) Confirm billing cycle starts immediately and test service.",
+        "suitability": 87,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Clear Prepaid Balance Flag",
+        "steps": "1) Access the billing engine for the subscriber. 2) Locate and remove the residual prepaid balance flag. 3) Apply the postpaid activation fee if not already charged. 4) Refresh the account view on the portal and verify postpaid benefits are active.",
+        "suitability": 82,
+        "llmScore": 81
+      },
+      {
+        "rank": 3,
+        "title": "Merge Account IDs and Reset Billing Cycle",
+        "steps": "1) Identify the old prepaid account ID linked to the subscriber. 2) Merge it into the new postpaid profile in the subscriber database. 3) Adjust the billing cycle start date to the migration date. 4) Regenerate the next invoice and confirm only postpaid charges appear.",
+        "suitability": 74,
+        "llmScore": 73
+      }
+    ],
+    "top1Suitability": 87,
+    "judge": {
+      "top1Score": 2,
+      "bestOf3Score": 4,
+      "top1Useful": 2,
+      "bestOf3Useful": 4,
+      "distinct": true,
+      "reason": "Solution #1 only addresses KYC, not the billing cycle issue, but is a plausible first step; Solution #3 aligns closely with the actual fix by resetting the billing cycle."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 63,
+      "searchMs": 2,
+      "llmMs": 8329
+    }
+  },
+  {
+    "id": "TKT-0846",
+    "category": "Plan Change",
+    "subtopic": "data rollover missing",
+    "description": "i upgraded to nova 599 on my iphone 13 in guwahati and paid ₹599 but still see 0gb rollover from last month pls fix asap!!",
+    "realResolution": "Root cause: the rollover flag was missed during the recent upgrade. Steps taken: 1) manually applied the 5 GB rollover credit 2) refreshed the account summary on the network side. Outcome: rollover data is now visible and usable on the device.",
+    "retrieved": [
+      {
+        "id": "TKT-0772",
+        "category": "Plan Change",
+        "subtopic": "data rollover missing",
+        "similarity": 0.7069349178604044
+      },
+      {
+        "id": "TKT-0804",
+        "category": "Plan Change",
+        "subtopic": "data rollover missing",
+        "similarity": 0.7063095050639422
+      },
+      {
+        "id": "TKT-0919",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.7061657855034011
+      },
+      {
+        "id": "TKT-0762",
+        "category": "Plan Change",
+        "subtopic": "data rollover missing",
+        "similarity": 0.6975270636820774
+      },
+      {
+        "id": "TKT-0793",
+        "category": "Plan Change",
+        "subtopic": "data rollover missing",
+        "similarity": 0.6734253270668575
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7069349178604044,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Restore Rollover Flag",
+        "steps": "1) Open the subscriber profile in the backend system 2) Verify the rollover flag is unset for the recent Nova 599 upgrade 3) Set the rollover flag to active 4) Recalculate the current data balance and push the update to the mobile app",
+        "suitability": 86,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Manual Rollover Recalculation",
+        "steps": "1) Access the rollover calculation module for the account 2) Run a manual rollover process for the previous billing cycle 3) Update the account with the correct rolled‑over data amount 4) Notify the customer via SMS that the data is now visible",
+        "suitability": 81,
+        "llmScore": 84
+      },
+      {
+        "rank": 3,
+        "title": "Re‑issue eSIM Provisioning",
+        "steps": "1) Generate a fresh eSIM QR code for the subscriber 2) Instruct the customer to scan and activate the new eSIM on the iPhone 13 3) Verify that the data balance reflects the paid Nova 599 plan and any rollover credit 4) Confirm service continuity on the device",
+        "suitability": 69,
+        "llmScore": 68
+      }
+    ],
+    "top1Suitability": 86,
+    "judge": {
+      "top1Score": 4,
+      "bestOf3Score": 4,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 closely mirrors the actual fix by restoring the rollover flag, and it is a sensible first action for the issue."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 68,
+      "searchMs": 5,
+      "llmMs": 8196
+    }
+  },
+  {
+    "id": "TKT-0857",
+    "category": "Plan Change",
+    "subtopic": "upgrade not reflected",
+    "description": "On 5th August I switched from Nova 299 Lite to Nova 599 Unlimited using my Samsung Galaxy A54 while staying in Pune. The upgrade was confirmed on the app, but my data cap still shows 5 GB instead of unlimited. Could you please check why the new plan is not reflecting?",
+    "realResolution": "Root cause: APN settings still pointed to the legacy profile. Steps taken: 1) Reset APN to \"tnova.net\" on the device 2) Reprovisioned the plan in the HLR system Outcome: The account now shows unlimited data and the device accesses the correct network.",
+    "retrieved": [
+      {
+        "id": "TKT-0836",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.8922548347872249
+      },
+      {
+        "id": "TKT-0847",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.853024211165921
+      },
+      {
+        "id": "TKT-0774",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.8518409127342308
+      },
+      {
+        "id": "TKT-0752",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.846978996982924
+      },
+      {
+        "id": "TKT-0805",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.8446570926854811
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.8922548347872249,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Manually trigger provisioning script",
+        "steps": "1) Verify the upgrade transaction and payment status in the CRM. 2) Manually run the provisioning script for the Nova 599 Unlimited SKU. 3) Refresh the customer profile cache and confirm unlimited data is active in the portal.",
+        "suitability": 91,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Re‑trigger plan change API and refresh profile",
+        "steps": "1) Re‑invoke the plan‑change API for the subscriber. 2) Force a profile refresh on the HLR and update the APN to \"tnova.net\". 3) Validate the data cap in the MyTeleNova portal and ensure 5G is enabled.",
+        "suitability": 81,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Clear stale session and force fresh provisioning",
+        "steps": "1) Clear any stale session tokens associated with the subscriber. 2) Initiate a fresh provisioning request from the billing engine. 3) Sync the device profile and verify the unlimited data limit appears in the app.",
+        "suitability": 73,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 91,
+    "judge": {
+      "top1Score": 3,
+      "bestOf3Score": 5,
+      "top1Useful": 3,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 partly matches the reprovisioning but misses APN reset; Solution #2 aligns fully with the real fix and is the most sensible first step."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 85,
+      "searchMs": 3,
+      "llmMs": 9345
+    }
+  },
+  {
+    "id": "TKT-0891",
+    "category": "Complaint/Escalation",
+    "subtopic": "technician no-show",
+    "description": "My NovaFiber 999 installation was scheduled for 14 July in Guwahati, but the technician never arrived and I was left without internet for my online college classes, causing me to miss deadlines.",
+    "realResolution": "Root cause: scheduling system error that omitted the field technician assignment. Steps taken: 1) Rescheduled a senior technician for the same day with priority flag 2) Provided a temporary mobile hotspot credit of ₹500 3) Updated the scheduling software bug. Outcome: Installation completed by 16 July and internet service restored before the exam week.",
+    "retrieved": [
+      {
+        "id": "TKT-0267",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.7835351671508033
+      },
+      {
+        "id": "TKT-0278",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.772526441878433
+      },
+      {
+        "id": "TKT-0318",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.7438948504410929
+      },
+      {
+        "id": "TKT-0328",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.7305136266189757
+      },
+      {
+        "id": "TKT-0286",
+        "category": "Service Activation",
+        "subtopic": "broadband installation delay",
+        "similarity": 0.7185861624436857
+      }
+    ],
+    "categoryHit5": false,
+    "top1Category": false,
+    "subtopicHit5": false,
+    "topSimilarity": 0.7835351671508033,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Reassign Technician and Expedite Installation",
+        "steps": "1) Verify the missed appointment in the scheduling system 2) Reassign a qualified technician to the correct address with a same‑day priority flag 3) Dispatch the technician and confirm arrival time with the customer 4) Provide a temporary mobile hotspot until the installation is completed",
+        "suitability": 87,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Escalate and Offer Compensation Voucher",
+        "steps": "1) Open an escalation to the field operations manager for the missed dispatch 2) Re‑schedule a priority installation slot for the next business day 3) Issue a compensation voucher (e.g., ₹500) to the customer for the outage inconvenience 4) Confirm the new appointment and voucher delivery with the customer",
+        "suitability": 80,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Senior Technician with Discount Incentive",
+        "steps": "1) Retrieve the pending installation order from the CRM 2) Assign a senior technician with a priority flag to the job 3) Provide a complimentary one‑month discount or waive the installation fee as goodwill 4) Notify the customer of the new appointment and discount details",
+        "suitability": 71,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 87,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 closely matches the actual fix and is the most sensible first step."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 49,
+      "searchMs": 2,
+      "llmMs": 9495
+    }
+  },
+  {
+    "id": "TKT-0893",
+    "category": "Complaint/Escalation",
+    "subtopic": "service closure request",
+    "description": "i want to close my nova 299 lite plan asap i moved to mumbai and dont need it any more pls confirm closure",
+    "realResolution": "Root cause: customer relocation request without pending dues. Steps taken: 1) Verified no outstanding balance on the account 2) Processed service termination effective 24 hours later 3) Sent confirmation email with final closure number. Outcome: Account closed as requested and final confirmation delivered to the customer's email.",
+    "retrieved": [
+      {
+        "id": "TKT-0946",
+        "category": "Complaint/Escalation",
+        "subtopic": "service closure request",
+        "similarity": 0.7168512561205095
+      },
+      {
+        "id": "TKT-0915",
+        "category": "Complaint/Escalation",
+        "subtopic": "service closure request",
+        "similarity": 0.6722317527832523
+      },
+      {
+        "id": "TKT-0925",
+        "category": "Complaint/Escalation",
+        "subtopic": "service closure request",
+        "similarity": 0.6652494327926908
+      },
+      {
+        "id": "TKT-0994",
+        "category": "Complaint/Escalation",
+        "subtopic": "service closure request",
+        "similarity": 0.6647799425059973
+      },
+      {
+        "id": "TKT-0936",
+        "category": "Complaint/Escalation",
+        "subtopic": "service closure request",
+        "similarity": 0.662280797683392
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7168512561205095,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Standard Service Closure",
+        "steps": "1) Verify customer identity and account ownership 2) Check for any outstanding balance or pending dues 3) Process termination in the provisioning system and schedule SIM deactivation 4) Send closure confirmation email with final bill details",
+        "suitability": 86,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Immediate Termination & Settlement",
+        "steps": "1) Confirm customer request and identity 2) Ensure no pending charges exist 3) Execute immediate account termination in the system 4) Email the customer a zero‑balance confirmation and final settlement statement",
+        "suitability": 76,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Closure with Early Termination Review",
+        "steps": "1) Verify identity and locate contract terms 2) Review any early termination fee payment or waiver eligibility 3) Process account termination accordingly 4) Issue confirmation number and send final closure email",
+        "suitability": 69,
+        "llmScore": 71
+      }
+    ],
+    "top1Suitability": 86,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 matches the actual fix and is the obvious sensible first action for the request"
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 66,
+      "searchMs": 9,
+      "llmMs": 8430
+    }
+  },
+  {
+    "id": "TKT-0914",
+    "category": "Complaint/Escalation",
+    "subtopic": "compensation request",
+    "description": "got charged extra on my Nova 299 Lite plan for last month, please give me some compensation",
+    "realResolution": "Root cause: erroneous surcharge application on the plan. Steps taken: 1) Reviewed the billing cycle and identified the extra ₹250 charge 2) Reversed the amount and issued a ₹250 credit 3) Updated the billing rules to prevent recurrence Outcome: Customer's account was corrected and a credit applied, with assurance of no future errors.",
+    "retrieved": [
+      {
+        "id": "TKT-0197",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.7360800593607238
+      },
+      {
+        "id": "TKT-0215",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.7153445934719971
+      },
+      {
+        "id": "TKT-0221",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.6957448168741108
+      },
+      {
+        "id": "TKT-0910",
+        "category": "Complaint/Escalation",
+        "subtopic": "rude agent experience",
+        "similarity": 0.6945954173362358
+      },
+      {
+        "id": "TKT-0249",
+        "category": "Billing",
+        "subtopic": "wrong plan billed",
+        "similarity": 0.6935563275759529
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": false,
+    "subtopicHit5": false,
+    "topSimilarity": 0.7360800593607238,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Restore Correct Plan & Refund",
+        "steps": "1) Verify the customer is subscribed to Nova 299 Lite in the CRM. 2) Switch the active plan back to Nova 299 Lite if it was changed. 3) Process a refund for the extra amount charged. 4) Update renewal settings to prevent future mis‑selection.",
+        "suitability": 87,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Correct Tariff Mapping & Re‑bill",
+        "steps": "1) Review the tariff mapping for Nova 299 Lite in the billing engine. 2) Correct any outdated or incorrect mapping entries. 3) Reassign the customer to the proper Nova 299 Lite rate. 4) Regenerate the invoice and apply a credit for the overcharge.",
+        "suitability": 78,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Explain Surcharge & Issue Credit Note",
+        "steps": "1) Contact the customer to clarify the surcharge policy for Nova 299 Lite. 2) Confirm that the extra charge was not warranted. 3) Issue a credit note to remove the extra amount from the bill. 4) Document the adjustment in the account notes.",
+        "suitability": 67,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 87,
+    "judge": {
+      "top1Score": 4,
+      "bestOf3Score": 4,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 closely matches the actual reversal and rule update, and is the obvious first action."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 23,
+      "searchMs": 2,
+      "llmMs": 8472
+    }
+  },
+  {
+    "id": "TKT-0921",
+    "category": "Complaint/Escalation",
+    "subtopic": "rude agent experience",
+    "description": "I am a senior citizen in Indore and the call centre person was very rude when I asked about my bill; they said \"you should know your own usage\" and hung up, leaving me confused about the extra ₹250 charge.",
+    "realResolution": "Root cause: billing inquiry was routed to an untrained agent. Steps taken: 1) reviewed the billing cycle and identified a one-time surcharge for late payment 2) explained the charge in plain language and offered a ₹100 goodwill credit 3) updated the call routing to ensure senior-friendly agents handle similar queries. Outcome: the customer received the credit and a clear statement, restoring confidence in the service.",
+    "retrieved": [
+      {
+        "id": "TKT-0586",
+        "category": "Roaming",
+        "subtopic": "high roaming bill",
+        "similarity": 0.5893704333758895
+      },
+      {
+        "id": "TKT-0910",
+        "category": "Complaint/Escalation",
+        "subtopic": "rude agent experience",
+        "similarity": 0.573304539697938
+      },
+      {
+        "id": "TKT-0610",
+        "category": "Roaming",
+        "subtopic": "high roaming bill",
+        "similarity": 0.5709101772196349
+      },
+      {
+        "id": "TKT-0006",
+        "category": "Billing",
+        "subtopic": "unexpected roaming charge",
+        "similarity": 0.5695544843157256
+      },
+      {
+        "id": "TKT-0008",
+        "category": "Billing",
+        "subtopic": "unexpected roaming charge",
+        "similarity": 0.5479280721479834
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": false,
+    "subtopicHit5": true,
+    "topSimilarity": 0.5893704333758895,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Reverse Erroneous Charge",
+        "steps": "1) Apologize for the rude experience and assure the customer of a resolution. 2) Retrieve the detailed billing records for the period in question. 3) Identify any duplicate or incorrect entries causing the extra ₹250. 4) Reverse the erroneous amount and apply the adjustment to the account. 5) Confirm the corrected bill with the customer and close the case.",
+        "suitability": 79,
+        "llmScore": 88
+      },
+      {
+        "rank": 2,
+        "title": "Explain Surcharge Policy",
+        "steps": "1) Apologize for the agent's behavior and thank the customer for their patience. 2) Review the customer's plan details to determine applicable surcharges. 3) Clearly explain why the ₹250 charge appeared under the current policy. 4) If the charge is not justified, adjust the bill accordingly. 5) Document the explanation in the ticket and obtain customer acknowledgment.",
+        "suitability": 70,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Offer Goodwill Credit",
+        "steps": "1) Express regret for the rude interaction and any confusion caused. 2) Verify the charge and confirm it is valid or a billing error. 3) Provide a goodwill credit (e.g., ₹200) as a gesture of goodwill regardless of final charge outcome. 4) Record the credit issuance and inform the customer of the updated balance. 5) Schedule a follow‑up call to ensure satisfaction.",
+        "suitability": 65,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 79,
+    "judge": {
+      "top1Score": 2,
+      "bestOf3Score": 4,
+      "top1Useful": 3,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 only partially aligns and is less appropriate, while #2 closely matches the real fix and is the most sensible first action."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 69,
+      "searchMs": 2,
+      "llmMs": 9553
+    }
+  },
+  {
+    "id": "TKT-0938",
+    "category": "Complaint/Escalation",
+    "subtopic": "regulator complaint threat",
+    "description": "My data was throttled after hitting 5 GB on Nova 299 Lite despite the unlimited claim; I will report this to the consumer forum if not fixed promptly.",
+    "realResolution": "Root cause: misconfigured data cap rule in billing system. Steps taken: 1) corrected the data cap configuration for unlimited plans 2) refreshed the subscriber profile in real time 3) sent verification of unlimited data status to the customer. Outcome: Unlimited data restored and an apology email sent.",
+    "retrieved": [
+      {
+        "id": "TKT-0984",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.7682321073299755
+      },
+      {
+        "id": "TKT-0927",
+        "category": "Complaint/Escalation",
+        "subtopic": "regulator complaint threat",
+        "similarity": 0.7665487933954547
+      },
+      {
+        "id": "TKT-0752",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.6501483451958575
+      },
+      {
+        "id": "TKT-0836",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.6479842696090147
+      },
+      {
+        "id": "TKT-0858",
+        "category": "Plan Change",
+        "subtopic": "upgrade not reflected",
+        "similarity": 0.6475369162532334
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.7682321073299755,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Remove Erroneous Data Cap Flag",
+        "steps": "1) Access the subscriber's profile in the provisioning system 2) Locate and clear any throttling or fair‑use flag applied to the Nova 299 Lite plan 3) Save the changes and confirm the policy now reflects true unlimited data 4) Verify the update via the MyTeleNova portal",
+        "suitability": 89,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Re‑provision Unlimited Plan Profile",
+        "steps": "1) Open the backend provisioning console and search for the customer's SIM record 2) Replace the existing Nova 299 Lite plan code with the correct Nova 299 Lite Unlimited code 3) Apply the changes and trigger a manual provisioning script 4) Refresh the customer profile cache and confirm unlimited quota is displayed",
+        "suitability": 79,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Force Network Re‑authentication",
+        "steps": "1) Instruct the customer to power‑cycle the device and SIM 2) Perform a remote network re‑authentication for the SIM via the OSS tool 3) Ask the customer to run a speed test to confirm throttling has ceased 4) Log the result in the ticket for future reference",
+        "suitability": 70,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 89,
+    "judge": {
+      "top1Score": 5,
+      "bestOf3Score": 5,
+      "top1Useful": 5,
+      "bestOf3Useful": 5,
+      "distinct": true,
+      "reason": "Solution #1 directly fixes the mis‑configured data cap like the real fix and is the obvious first action an agent would take."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 54,
+      "searchMs": 4,
+      "llmMs": 10855
+    }
+  },
+  {
+    "id": "TKT-0950",
+    "category": "Complaint/Escalation",
+    "subtopic": "repeated unresolved issue",
+    "description": "On 12 Sep my Nova 599 Unlimited line on my Samsung Galaxy A54 kept dropping calls in Pune even after three technician visits, and the issue resurfaced today causing me to miss important client calls.",
+    "realResolution": "Root cause: faulty base station antenna configuration affecting handset handover. Steps taken: 1) escalated to network engineering team 2) reprogrammed the affected cell sector parameters 3) forced a device profile refresh on the subscriber's HLR Outcome: call drop rate returned to normal and the subscriber confirmed stable connectivity.",
+    "retrieved": [
+      {
+        "id": "TKT-0898",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.8110301283545239
+      },
+      {
+        "id": "TKT-0121",
+        "category": "Network/Connectivity",
+        "subtopic": "call drops",
+        "similarity": 0.7543730451297772
+      },
+      {
+        "id": "TKT-0940",
+        "category": "Complaint/Escalation",
+        "subtopic": "repeated unresolved issue",
+        "similarity": 0.7476917113490648
+      },
+      {
+        "id": "TKT-0091",
+        "category": "Network/Connectivity",
+        "subtopic": "call drops",
+        "similarity": 0.7422960913877088
+      },
+      {
+        "id": "TKT-0031",
+        "category": "Network/Connectivity",
+        "subtopic": "call drops",
+        "similarity": 0.7308414521948695
+      }
+    ],
+    "categoryHit5": true,
+    "top1Category": true,
+    "subtopicHit5": true,
+    "topSimilarity": 0.8110301283545239,
+    "leaked": false,
+    "solutions": [
+      {
+        "rank": 1,
+        "title": "Reprovision VoLTE and Reset APN",
+        "steps": "1) Verify the subscriber's VoLTE flag is enabled in the HLR; 2) Reset the device APN to \"tnova.net\"; 3) Reprovision the VoLTE profile on the subscriber record; 4) Perform a network reset on the handset and confirm call stability",
+        "suitability": 89,
+        "llmScore": 92
+      },
+      {
+        "rank": 2,
+        "title": "Allocate Dedicated MSC Resources",
+        "steps": "1) Open the MSC management console for the Pune region; 2) Allocate a dedicated MSC pool for Nova 599 Unlimited high‑capacity accounts; 3) Update routing tables to balance voice traffic across the new pool; 4) Monitor live traffic for drop rates and adjust as needed",
+        "suitability": 77,
+        "llmScore": 78
+      },
+      {
+        "rank": 3,
+        "title": "Switch Preferred Voice Band",
+        "steps": "1) Run a drive‑test to confirm interference on the 1800 MHz band; 2) Change the device's preferred voice band to 2100 MHz via network settings; 3) Apply interference mitigation parameters on the network for the affected cell sites; 4) Verify call duration stability after the change",
+        "suitability": 68,
+        "llmScore": 65
+      }
+    ],
+    "top1Suitability": 89,
+    "judge": {
+      "top1Score": 1,
+      "bestOf3Score": 2,
+      "top1Useful": 3,
+      "bestOf3Useful": 3,
+      "distinct": true,
+      "reason": "Solution #1 doesn't match the actual network‑antenna fix (score 1) but is a plausible first‑line troubleshooting action (useful 3)."
+    },
+    "judgeModel": "openai/gpt-oss-120b",
+    "timings": {
+      "embedMs": 59,
+      "searchMs": 4,
+      "llmMs": 9578
+    }
+  }
+]

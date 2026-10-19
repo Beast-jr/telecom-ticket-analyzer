@@ -15,6 +15,11 @@ const EnvSchema = z.object({
   STORE: z.enum(["local", "azure"]).default("local"),
   // Local store file; relative paths resolve from backend/.
   STORE_VECTORS_PATH: optionalString.transform((v) => v ?? "../data/vectors.json"),
+  // Cap llmScore for solutions backed by fewer than 2 tickets (see rag/rank.ts).
+  EVIDENCE_CAP: z.preprocess(
+    (v) => (typeof v === "string" && v.trim() === "" ? undefined : v),
+    z.enum(["on", "off"]).default("on"),
+  ),
   GEMINI_API_KEY: optionalString,
   GEMINI_MODEL: optionalString.transform((v) => v ?? "gemini-2.5-flash"),
   GROQ_API_KEY: optionalString,

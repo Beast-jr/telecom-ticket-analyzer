@@ -12,14 +12,16 @@ export interface ChatOptions {
   temperature?: number;
   // Currently honored by groq.ts only.
   maxTokens?: number;
+  // Override the configured model for this call.
+  model?: string;
 }
 
 export async function chat(
   messages: ChatCompletionMessageParam[],
-  { json = false, temperature }: ChatOptions = {},
+  { json = false, temperature, model }: ChatOptions = {},
 ): Promise<string> {
   const completion = await client.chat.completions.create({
-    model: config.GEMINI_MODEL,
+    model: model ?? config.GEMINI_MODEL,
     messages,
     temperature,
     ...(json ? { response_format: { type: "json_object" as const } } : {}),

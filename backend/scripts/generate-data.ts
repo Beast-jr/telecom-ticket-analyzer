@@ -3,18 +3,15 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import { chat } from "../src/llms/index.js";
+import { LimitHitError, withRateLimitRetry } from "../src/llms/rate-limit.js";
 import { CATEGORIES, CATEGORY_NAMES, type Category } from "../src/data/categories.js";
 import { TicketDraftSchema, TicketSchema, type Ticket } from "../src/types/ticket.js";
 
 const DATA_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../data");
 const TICKETS_PATH = path.join(DATA_DIR, "tickets.json");
 const DELAY_MS = 5_000;
-const RATE_LIMIT_WAIT_MS = 60_000;
-const RATE_LIMIT_RETRIES = 3;
 const MAX_EMPTY_BATCHES = 3;
 const JSON_RETRIES = 2;
-
-class LimitHitError extends Error {}
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -93,45 +90,16 @@ Variety requirements:
 - No two tickets should read alike.`;
 }
 
-function isRateLimit(err: unknown): boolean {
-  const e = err as { status?: number; message?: string };
-  return e?.status === 429 || /429|quota|rate.?limit|resource.?exhausted/i.test(e?.message ?? "");
-}
-
-// Provider-suggested wait: a retry-after header (seconds), or Groq's "try again in 1m2.5s" message.
-function retryAfterMs(err: unknown): number | undefined {
-  const e = err as { headers?: Headers | Record<string, string>; message?: string };
-  const header =
-    e?.headers instanceof Headers ? e.headers.get("retry-after") : e?.headers?.["retry-after"];
-  const seconds = Number(header);
-  if (header && Number.isFinite(seconds) && seconds > 0) return seconds * 1000 + 1000;
-
-  const m = /try again in\s+(?:(\d+)m)?\s*(?:([\d.]+)s)?/i.exec(e?.message ?? "");
-  if (m && (m[1] || m[2])) {
-    const total = Number(m[1] ?? 0) * 60 + Number(m[2] ?? 0);
-    if (total > 0) return Math.ceil(total * 1000) + 1000;
-  }
-  return undefined;
-}
-
 async function callWithRetry(prompt: string): Promise<string> {
-  for (let attempt = 0; ; attempt++) {
-    try {
-      return await chat(
-        [
-          { role: "system", content: "You generate synthetic telecom support data. Reply with valid JSON only." },
-          { role: "user", content: prompt },
-        ],
-        { json: true, temperature: 0.9 },
-      );
-    } catch (err) {
-      if (!isRateLimit(err)) throw err;
-      if (attempt >= RATE_LIMIT_RETRIES) throw new LimitHitError();
-      const waitMs = retryAfterMs(err) ?? RATE_LIMIT_WAIT_MS;
-      console.warn(`  Rate limited — waiting ${Math.ceil(waitMs / 1000)}s (retry ${attempt + 1}/${RATE_LIMIT_RETRIES})...`);
-      await sleep(waitMs);
-    }
-  }
+  return withRateLimitRetry(() =>
+    chat(
+      [
+        { role: "system", content: "You generate synthetic telecom support data. Reply with valid JSON only." },
+        { role: "user", content: prompt },
+      ],
+      { json: true, temperature: 0.9 },
+    ),
+  );
 }
 
 function isJsonFailure(err: unknown): boolean {

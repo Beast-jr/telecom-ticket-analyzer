@@ -14,7 +14,10 @@
     "split": "tsx scripts/split-data.ts",
     "ingest": "tsx scripts/ingest.ts",
     "search": "tsx scripts/search-test.ts",
-    "analyze": "tsx scripts/analyze-test.ts"
+    "analyze": "tsx scripts/analyze-test.ts",
+    "eval": "tsx scripts/evaluate.ts",
+    "eval:compare": "tsx scripts/compare-eval.ts",
+    "eval:rerank": "tsx scripts/rerank-offline.ts"
   },
   "keywords": [],
   "author": "",
