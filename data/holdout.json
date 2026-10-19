@@ -1,0 +1,452 @@
+[
+  {
+    "id": "TKT-0035",
+    "category": "Network/Connectivity",
+    "subtopic": "high latency/gaming lag",
+    "priority": "Medium",
+    "description": "Playing PUBG on my Redmi Note 12 in Kochi, the ping spikes to 250 ms even though I have a Nova 599 Unlimited plan. It's ruining the experience.",
+    "resolution": "Root cause: routing loop in the regional ISP peering point causing high latency. Steps taken: 1) traced the route and identified the loop at the peering exchange 2) coordinated with the upstream ISP to correct the routing tables 3) performed latency tests post-fix. Outcome: Ping stabilized around 45 ms, gaming experience returned to normal.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0043",
+    "category": "Network/Connectivity",
+    "subtopic": "broadband outage",
+    "priority": "Medium",
+    "description": "my broadband on nova 599 unlimited stopped working after a storm in Pune, router lights are blinking red and I can't access any sites, please help quickly.",
+    "resolution": "Root cause: Power surge damaged the ONT hardware. Steps taken: 1) Sent a replacement ONT to the customer's address. 2) Remote-activated the new ONT and synced it with the network. Outcome: Service restored and connectivity is stable across all devices.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0050",
+    "category": "Network/Connectivity",
+    "subtopic": "call drops",
+    "priority": "Medium",
+    "description": "Why does my iPhone 13 keep dropping calls in Kochi when I'm on the road? I'm a repeat caller, same issue after the last fix, and it's really annoying.",
+    "resolution": "Root cause: intermittent handover failure between 4G and 3G cells. Steps taken: 1) applied a network patch to improve handover algorithms 2) updated device's radio firmware remotely 3) verified call continuity across multiple towers Outcome: call drops reduced to zero in subsequent tests, user confirmed stable connectivity.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0071",
+    "category": "Network/Connectivity",
+    "subtopic": "5G not showing",
+    "priority": "Low",
+    "description": "i am using nova 599 unlimited on my iPhone 13 and cant see 5g signal at home in Kochi, any fix plz??",
+    "resolution": "Root cause: missing 5G roaming profile for the device. Steps taken: 1) added 5G roaming profile to the subscriber's account 2) refreshed the device's network settings. Outcome: 5G signal now appears in the home location.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0103",
+    "category": "Network/Connectivity",
+    "subtopic": "no signal indoors",
+    "priority": "Low",
+    "description": "i cant get any signal in my bedroom in lucknow after switching to nova 299 lite, please fix asap",
+    "resolution": "Root cause: Indoor femtocell not activated for the subscriber's location. Steps taken: 1) Activated the femtocell service for the address 12-B, Lucknow 2) Sent a configuration update to the device. Outcome: Signal now available inside the bedroom with stable connectivity.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0108",
+    "category": "Network/Connectivity",
+    "subtopic": "slow mobile data",
+    "priority": "Low",
+    "description": "i have nova 299 lite and my redmi note 12 is like sooo slow on data in lucknow?? pls fix",
+    "resolution": "Root cause: misconfigured APN throttling on the account. Steps taken: 1) corrected APN to \"tnova.net\" 2) cleared data session cache on the network side. Outcome: Data speeds returned to expected 4G rates for the device.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0137",
+    "category": "Network/Connectivity",
+    "subtopic": "slow mobile data",
+    "priority": "Medium",
+    "description": "On 12th Sep, my iPhone 13 in Lucknow started downloading webpages at a snail pace while I was on the Nova 599 Unlimited plan. The speed was barely 0.5 Mbps even during off-peak hours.",
+    "resolution": "Root cause: Congested LTE cell caused by mis-aligned carrier aggregation. Steps taken: 1) Re-assigned the device to a less congested LTE band. 2) Reset the APN to \"tnova.net\" and refreshed the data session. Outcome: Average download speed increased to 12 Mbps, restoring normal browsing.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0181",
+    "category": "Billing",
+    "subtopic": "autopay failure",
+    "priority": "High",
+    "description": "I am a non-native English speaker; my autopay for NovaFiber 999 didn't work on 20 May, causing my service to suspend in the middle of a video conference on my iPhone 13 in Kolkata.",
+    "resolution": "Root cause: Incorrect bank routing number entered during initial setup. Steps taken: 1) Collected correct bank routing details from customer 2) Updated the payment profile in the autopay system 3) Processed the pending ₹999 payment and re-activated the service instantly. Outcome: Service restored, and future autopays will succeed with corrected details.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0213",
+    "category": "Billing",
+    "subtopic": "unexpected roaming charge",
+    "priority": "Critical",
+    "description": "i was charged 3000 rupees for roaming while i was in guwahati on 10 may i dont understand how this happened i will complain to TRAI if not fixed fast!!",
+    "resolution": "Root cause: Incorrect network classification caused the domestic tower to be marked as international roaming. Steps taken: 1) Reprovisioned the SIM profile to correct the network classification. 2) Reset the APN settings to \"tnova.net\" on the device. 3) Credited the full ₹3,000 roaming amount with reference REF33445. Outcome: The erroneous roaming charge was fully refunded and the SIM now correctly registers as domestic, preventing future incidents.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0214",
+    "category": "Billing",
+    "subtopic": "wrong plan billed",
+    "priority": "High",
+    "description": "I am a repeat caller; last month I was billed for Nova 599 Unlimited but I actually switched to Nova 299 Lite on 15 March, yet my May bill still shows the higher plan fee of ₹599.",
+    "resolution": "Root cause: Plan change request was not propagated to the billing engine due to a pending approval flag. Steps taken: 1) Verified the plan change request in the CRM and cleared the pending flag. 2) Updated the billing profile to Nova 299 Lite. 3) Issued a prorated credit of ₹300 with reference REF77889. Outcome: The correct plan is now applied and the overcharged amount has been refunded.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0233",
+    "category": "Billing",
+    "subtopic": "wrong plan billed",
+    "priority": "Medium",
+    "description": "I signed up for Nova 299 Lite but the bill shows Nova 599 Unlimited fees; I'm a senior citizen in Guwahati and confused.",
+    "resolution": "Root cause: plan migration script mis-assigned the higher tier. Steps taken: 1) audited plan assignment logs 2) reverted account to Nova 299 Lite 3) applied prorated credit for overcharge with reference REF55421. Outcome: correct plan applied and credit issued.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0239",
+    "category": "Billing",
+    "subtopic": "duplicate charge",
+    "priority": "Low",
+    "description": "I was looking at my May 2024 statement on my Redmi Note 12 and saw two ₹599 entries for the Nova 599 Unlimited plan, both dated 12-05-2024. I'm a college student in Pune and need clarification.",
+    "resolution": "Root cause: System glitch caused duplicate posting of the monthly subscription. Steps taken: 1) Identified duplicate transaction in billing ledger 2) Reversed the extra ₹599 debit with reference REF84521 3) Updated the account ledger to reflect a single charge. Outcome: Account now shows only one correct charge and the duplicate amount has been refunded to the bank account.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0244",
+    "category": "Billing",
+    "subtopic": "refund not received",
+    "priority": "Critical",
+    "description": "I am a repeat caller; my refund of ₹1,250 for a cancelled Nova 599 Unlimited plan from 15-07-2024 still hasn't hit my bank after three weeks. This impacts my small business payments.",
+    "resolution": "Root cause: Refund batch processing error caused the transaction to be omitted. Steps taken: 1) Located the pending refund request in the financial system 2) Re-initiated the refund via the banking gateway 3) Confirmed successful transfer with reference REF112233. Outcome: ₹1,250 has been transferred to the customer's bank account and confirmation sent.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0251",
+    "category": "Billing",
+    "subtopic": "late fee dispute",
+    "priority": "Low",
+    "description": "Received a ₹250 late fee on 20th July even though my NovaFiber 999 connection in Indore was paid on time; the iPhone 13 shows the due date was 15th July. This is unacceptable and I demand the fee be removed immediately.",
+    "resolution": "Root cause: An automated late-fee rule was triggered due to a delayed update of the payment receipt timestamp. Steps taken: 1) Reviewed the payment logs and confirmed receipt was recorded on 15th July. 2) Adjusted the fee calculation engine to exclude the erroneous charge and removed the ₹250 fee from the account. Outcome: The late fee has been waived and the customer's billing statement now reflects the correct zero-fee status.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0252",
+    "category": "Service Activation",
+    "subtopic": "new SIM not activated",
+    "priority": "Low",
+    "description": "I just got my Nova 299 Lite SIM in Pune and tried to use it on my Samsung Galaxy A54, but the network never shows up even after a full restart of the phone and checking the SIM tray. The activation message still says pending and I need it for my classes tomorrow.",
+    "resolution": "Root cause: SIM provisioning was pending in the activation queue. Steps taken: 1) Verified the SIM serial number in the system and confirmed it was not yet flagged as active. 2) Manually triggered activation request and updated the status in the HLR. Outcome: The SIM is now active, network appears, and the customer can use voice and data services.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0255",
+    "category": "Service Activation",
+    "subtopic": "eSIM QR not working",
+    "priority": "Medium",
+    "description": "my new nova 299 lite eSIM on redmi note 12 in guwahati keeps failing, the QR just flashes and says error, tried reboot but nothing works, need it for work",
+    "resolution": "Root cause: Backend provisioning failed to assign the eSIM profile to the device. Steps taken: 1) Reviewed the provisioning logs and identified a missing profile ID. 2) Re-issued the eSIM profile with a correct identifier. 3) Assisted the customer to scan the new QR and complete activation. Outcome: The eSIM activates correctly, data is functional, and the customer can resume work.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0257",
+    "category": "Service Activation",
+    "subtopic": "broadband installation delay",
+    "priority": "Low",
+    "description": "i need nova 999 broadband in pune, booked last week, still waiting for the install guy, any update pls",
+    "resolution": "Root cause: The installation request was stuck in the queue due to high demand. Steps taken: 1) Located the pending work order in the system. 2) Escalated the request to the field operations team for immediate assignment. Outcome: A technician was dispatched the same day and completed the installation within 2 hours.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0262",
+    "category": "Service Activation",
+    "subtopic": "international roaming activation",
+    "priority": "Low",
+    "description": "need roaming on my nova 599 unlimited while i am in guwahati, i tried the app but it says not allowed pls fix",
+    "resolution": "Root cause: The roaming option was disabled for the account due to an outdated profile. Steps taken: 1) Updated the subscriber profile to allow roaming. 2) Re-issued the roaming activation request and confirmed the status. Outcome: Roaming is now active, and the customer can use voice and data while traveling.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0302",
+    "category": "Service Activation",
+    "subtopic": "OTT add-on not active",
+    "priority": "Low",
+    "description": "i signed up for the nova 599 unlimited plan and added the streaming bundle on 1st nov but the app still shows no access, any quick fix pls",
+    "resolution": "Root cause: OTT bundle provisioning failed due to a mismatched subscriber ID. Steps taken: 1) Mapped the correct subscriber ID to the OTT service 2) Re-sent the entitlement payload to the OTT platform 3) Confirmed bundle activation in the user portal. Outcome: OTT add-on is now visible and usable.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0319",
+    "category": "Service Activation",
+    "subtopic": "VoLTE not enabled",
+    "priority": "Medium",
+    "description": "I called earlier about my Nova 299 Lite VoLTE not working on my Samsung Galaxy A54, fixed it then it stopped again after the latest update, this is the second time this week.",
+    "resolution": "Root cause: VoLTE flag cleared during recent OTA update. Steps taken: 1) Verified device capability for VoLTE 2) Re-provisioned VoLTE flag in the HLR for the subscriber 3) Instructed the customer to restart the device Outcome: VoLTE is now enabled and calls are clear on the device.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0385",
+    "category": "SIM & Porting",
+    "subtopic": "port-out UPC code issue",
+    "priority": "Medium",
+    "description": "I am a repeat caller; after my first port-out attempt the UPC code was wrong, we tried again today and still get an error, need this fixed for my Nova 299 Lite plan in Indore.",
+    "resolution": "Root cause: Duplicate pending port request blocked new UPC generation. Steps taken: 1) Cancelled the previous incomplete port request. 2) Forced generation of a fresh UPC code. 3) Sent the new UPC to the donor operator and confirmed acceptance. Outcome: Port-out finalized and number successfully transferred.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0400",
+    "category": "SIM & Porting",
+    "subtopic": "SIM card damaged",
+    "priority": "Low",
+    "description": "i got a cracked sim card from teleNova and cant use it on my iPhone 13 in Lucknow plz send new one asap!!",
+    "resolution": "Root cause: Physical damage to the SIM substrate caused read errors. Steps taken: 1) Deactivated the damaged SIM 2) Issued a replacement SIM and mailed it with tracking number 3) Activated the new SIM remotely Outcome: Customer now has a functional SIM and service restored.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0419",
+    "category": "SIM & Porting",
+    "subtopic": "lost SIM",
+    "priority": "Medium",
+    "description": "i need a new sim asap i lost my old one while traveling in Jaipur cant wait plz send to my home address 9876543210",
+    "resolution": "Root cause: Lost SIM required immediate deactivation to avoid fraud. Steps taken: 1) Deactivated the lost SIM instantly. 2) Processed a replacement SIM order with priority handling. 3) Dispatched the new SIM to the customer's home address with tracking. Outcome: Lost SIM blocked, replacement delivered, and service restored.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0446",
+    "category": "SIM & Porting",
+    "subtopic": "number blocked after port",
+    "priority": "High",
+    "description": "After my number was ported from Vodafone on 5th Oct, it got blocked on my Redmi Note 12 in Guwahati. I cannot receive OTPs for banking, and the support portal says \"blocked\" without reason.",
+    "resolution": "Root cause: Automated fraud filter mistakenly flagged the newly ported MSISDN. Steps taken: 1) Lifted the block flag in the fraud management console 2) Re-provisioned the subscriber profile with correct routing 3) Sent a test SMS and confirmed delivery Outcome: Number is unblocked and OTPs are received normally.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0465",
+    "category": "SIM & Porting",
+    "subtopic": "SIM swap request",
+    "priority": "Low",
+    "description": "i need a sim swap asap my nova 299 lite is on my old phone i cant use it anymore plz help",
+    "resolution": "Root cause: customer requested SIM swap to a new device. Steps taken: 1) verified identity via OTP 2) deactivated old SIM and issued new eSIM QR code 3) guided customer to scan QR on new phone Outcome: SIM swapped and service active on the new device.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0482",
+    "category": "SIM & Porting",
+    "subtopic": "port-in stuck",
+    "priority": "Medium",
+    "description": "On 12 Aug I tried porting my number from Airtel to Nova 299 Lite while using my Samsung Galaxy A54 in Pune, but the status has been 'pending' for three days and I still can't make calls.",
+    "resolution": "Root cause: The port-in request was stuck due to an unprocessed verification flag in the HLR. Steps taken: 1) Reset the verification flag for the MSISDN in the provisioning system 2) Re-initiated the port-in request and forced a sync with the donor operator Outcome: The number successfully transferred and is now active on the Nova plan.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0504",
+    "category": "Roaming",
+    "subtopic": "roaming pack not applied",
+    "priority": "High",
+    "description": "I am a small-business owner, travelling from Indore to Singapore on 05-04-2024, and the NovaFiber 999 roaming pack I bought yesterday never showed up, leaving me with ₹2,199 unexpected roaming charges.",
+    "resolution": "Root cause: Roaming pack purchase not linked to subscriber account due to transaction timeout. Steps taken: 1) Re-validated the purchase transaction ID 2) Manually attached the NovaFiber 999 roaming pack to the account 3) Applied a credit of ₹2,199 for the unauthorized usage Outcome: Pack is now active and future roaming will be billed at the pack rate.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0537",
+    "category": "Roaming",
+    "subtopic": "data not working abroad",
+    "priority": "Medium",
+    "description": "i was in lucknow on my nova 599 and my data just stopped working?? no internet for 2 hours, tried turning airplane mode on and off but still nothing",
+    "resolution": "Root cause: Temporary outage of the roaming gateway for the Lucknow region. Steps taken: 1) Routed the subscriber's traffic through an alternate gateway. 2) Updated the routing tables and refreshed the APN settings. Outcome: Data connectivity was restored and the customer could browse the web again.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0581",
+    "category": "Roaming",
+    "subtopic": "roaming SMS OTP not received",
+    "priority": "Medium",
+    "description": "I am a college student on a semester exchange in Bangkok, using Nova 599 Unlimited. Every OTP for my college portal arrives late or not at all, causing me to miss deadlines.",
+    "resolution": "Root cause: SMSC gateway filtering OTP messages due to mismatched sender ID. Steps taken: 1) Whitelisted the college portal's sender IDs in the SMSC. 2) Reset the OTP delivery queue for the subscriber. Outcome: OTPs are now received instantly while roaming.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0584",
+    "category": "Roaming",
+    "subtopic": "incoming calls not received abroad",
+    "priority": "High",
+    "description": "I am a senior citizen traveling from Lucknow to Dubai; my iPhone 13 rings continuously but I never get the incoming call audio, and I missed an important family call.",
+    "resolution": "Root cause: VoLTE flag not provisioned for international roaming. Steps taken: 1) Checked HLR for VoLTE status 2) Reprovisioned VoLTE flag for the MSISDN 3) Performed a network detach/attach sequence Outcome: Incoming calls now ring normally and the missed call was recovered through call back.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0591",
+    "category": "Roaming",
+    "subtopic": "no network abroad",
+    "priority": "Low",
+    "description": "my phone shows no network in guwahati after landing, plan is nova 599 unlimited, need help plz",
+    "resolution": "Root cause: Network selection stuck on previous MCC. Steps taken: 1) Sent a remote network scan command 2) Forced manual network selection to the local operator 3) Confirmed signal lock and data session Outcome: Device now registers on the Guwahati network and services are functional.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0624",
+    "category": "Roaming",
+    "subtopic": "high roaming bill",
+    "priority": "High",
+    "description": "I was charged ₹9,800 for a short weekend trip to Mumbai while on my Nova 299 Lite plan, even though I only used 150 MB. This is unacceptable and I demand a refund.",
+    "resolution": "Root cause: Incorrect tariff mapping applied to the roaming zone, charging post-paid rates instead of the plan's roaming rates. Steps taken: 1) Corrected the tariff code for the Mumbai roaming zone. 2) Recalculated the bill and issued a credit of ₹9,150 with reference REF55432. 3) Added a monitoring rule to ensure correct tariff application. Outcome: Adjusted bill reflects ₹650 usage, and the customer received a refund confirmation email.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0631",
+    "category": "Device/Handset",
+    "subtopic": "hotspot not working",
+    "priority": "High",
+    "description": "Senior citizen from Guwahati with a Samsung Galaxy A54 on Nova 299 Lite tries to enable hotspot for his grandson's tablet, but the hotspot never appears to other devices and shows 'Unable to start hotspot' error.",
+    "resolution": "Root cause: Disabled tethering flag on subscriber profile. Steps taken: 1) Enabled hotspot feature on HLR for the line. 2) Reset network settings on the phone. 3) Confirmed hotspot visibility and successful connection to a test device. Outcome: Hotspot now functions and grandson can browse the internet.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0635",
+    "category": "Device/Handset",
+    "subtopic": "router/ONT red light",
+    "priority": "High",
+    "description": "Angry about the red light on my NovaFiber 999 ONT in Indore, the router has been offline for hours and my home office can't connect, I'm losing client meetings and I might post this on social media.",
+    "resolution": "Root cause: Power supply fault causing ONT to enter fault state. Steps taken: 1) Dispatched technician to replace faulty power adapter. 2) Reset ONT and performed line sync. 3) Verified internet connectivity on multiple devices. Outcome: Red light cleared, internet restored, client meetings can proceed.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0660",
+    "category": "Device/Handset",
+    "subtopic": "APN settings wrong",
+    "priority": "Medium",
+    "description": "Plan Nova 599 Unlimited on my Samsung Galaxy A54 gave me no data after the recent update, I think the APN got reset on 5th Oct in Indore, please fix it quickly.",
+    "resolution": "Root cause: APN reset during OTA update. Steps taken: 1) Instructed user to navigate to mobile network settings. 2) Re-entered APN \"tnova.net\" with default credentials. 3) Verified data connectivity after reboot. Outcome: Data service restored and user confirmed internet speed is normal.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0694",
+    "category": "Device/Handset",
+    "subtopic": "device locked to network",
+    "priority": "Medium",
+    "description": "After switching to Nova 599 Unlimited, my iPhone 13 still says 'SIM not supported' in Mumbai; I think it's still tied to the previous operator and I'm frustrated!!",
+    "resolution": "Root cause: Carrier lock not cleared after plan migration. Steps taken: 1) Verified lock status via carrier database and initiated unlock process. 2) Sent unlock confirmation and updated device profile. 3) Guided customer to reinsert SIM and reboot. Outcome: Device now accepts the new SIM and service is active.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0699",
+    "category": "Device/Handset",
+    "subtopic": "VoWiFi not working",
+    "priority": "Medium",
+    "description": "I am a senior citizen in Guwahati, trying to use VoWiFi on my Samsung Galaxy A54, but every time I attempt a call it just says \"Calling...\" and hangs up.",
+    "resolution": "Root cause: Device firmware lacked the latest VoWiFi patch. Steps taken: 1) Directed user to install the latest OTA update for the Galaxy A54. 2) Verified VoWiFi toggle enabled and performed a test call. Outcome: VoWiFi calls now complete successfully.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0741",
+    "category": "Device/Handset",
+    "subtopic": "phone not detecting SIM",
+    "priority": "Medium",
+    "description": "I am a college student in Pune using a Samsung Galaxy A54 on Nova 599 Unlimited, and the device suddenly stopped recognizing my new SIM after I switched from prepaid. I tried restarting but the SIM icon never appears, and I need it for my online classes.",
+    "resolution": "Root cause: SIM slot hardware contact failure due to dust. Steps taken: 1) Guided user to clean SIM tray with compressed air. 2) Re-inserted SIM and performed a soft reset. Outcome: Device now detects SIM and network registers successfully.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0786",
+    "category": "Plan Change",
+    "subtopic": "downgrade request blocked",
+    "priority": "High",
+    "description": "I tried to downgrade from Nova 599 Unlimited to Nova 299 Lite yesterday in Lucknow using my iPhone 13, but the system kept rejecting my request and said \"downgrade not allowed\" even though my contract ended on 30th Sep.",
+    "resolution": "Root cause: contract end date not updated in CRM. Steps taken: 1) updated contract termination date in subscriber record. 2) re-initiated downgrade request through provisioning engine. 3) forced a tariff switch on HLR and cleared pending downgrade flag. Outcome: downgrade processed successfully and new plan activated on 01 Oct with correct billing.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0789",
+    "category": "Plan Change",
+    "subtopic": "family plan member add",
+    "priority": "Low",
+    "description": "pls add my brother to my Nova 299 Lite family pack in Kochi his number is 98765xxxx, he cant see any data yet",
+    "resolution": "Root cause: missing member entry in family plan table. Steps taken: 1) added brother's MSISDN to family plan roster. 2) allocated shared data quota to his line. 3) sent push notification to refresh plan details. Outcome: brother now sees the shared data and can start using it.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0828",
+    "category": "Plan Change",
+    "subtopic": "benefits missing after change",
+    "priority": "Medium",
+    "description": "After moving from Nova 299 Lite to Nova 599 Unlimited on 20 Oct, I noticed the complimentary OTT subscription for Disney+ Hotstar is not showing up on my account, even though I'm in Lucknow and paid the extra ₹250.",
+    "resolution": "Root cause: The OTT entitlement flag was not set during the plan transition. Steps taken: 1) Updated the entitlement table with the Disney+ Hotstar flag for the subscriber. 2) Triggered a profile sync with the OTT partner API. 3) Confirmed activation via the customer portal. Outcome: The Disney+ Hotstar benefit is now visible and usable on the customer's app.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0832",
+    "category": "Plan Change",
+    "subtopic": "prepaid to postpaid migration",
+    "priority": "High",
+    "description": "I am a senior citizen in Lucknow, migrated from prepaid 199 to postpaid Nova 299 Lite on 15 Sep, but the postpaid bill still shows ₹0 and I cannot use the postpaid benefits.",
+    "resolution": "Root cause: The billing cycle was not initiated for the newly created postpaid account. Steps taken: 1) Activated the postpaid billing cycle in the billing engine. 2) Re-provisioned the subscriber profile to enable postpaid features. 3) Generated a provisional invoice for the current cycle. Outcome: The bill now reflects the correct amount and all postpaid benefits are functional.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0846",
+    "category": "Plan Change",
+    "subtopic": "data rollover missing",
+    "priority": "Medium",
+    "description": "i upgraded to nova 599 on my iphone 13 in guwahati and paid ₹599 but still see 0gb rollover from last month pls fix asap!!",
+    "resolution": "Root cause: the rollover flag was missed during the recent upgrade. Steps taken: 1) manually applied the 5 GB rollover credit 2) refreshed the account summary on the network side. Outcome: rollover data is now visible and usable on the device.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0857",
+    "category": "Plan Change",
+    "subtopic": "upgrade not reflected",
+    "priority": "Medium",
+    "description": "On 5th August I switched from Nova 299 Lite to Nova 599 Unlimited using my Samsung Galaxy A54 while staying in Pune. The upgrade was confirmed on the app, but my data cap still shows 5 GB instead of unlimited. Could you please check why the new plan is not reflecting?",
+    "resolution": "Root cause: APN settings still pointed to the legacy profile. Steps taken: 1) Reset APN to \"tnova.net\" on the device 2) Reprovisioned the plan in the HLR system Outcome: The account now shows unlimited data and the device accesses the correct network.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0891",
+    "category": "Complaint/Escalation",
+    "subtopic": "technician no-show",
+    "priority": "High",
+    "description": "My NovaFiber 999 installation was scheduled for 14 July in Guwahati, but the technician never arrived and I was left without internet for my online college classes, causing me to miss deadlines.",
+    "resolution": "Root cause: scheduling system error that omitted the field technician assignment. Steps taken: 1) Rescheduled a senior technician for the same day with priority flag 2) Provided a temporary mobile hotspot credit of ₹500 3) Updated the scheduling software bug. Outcome: Installation completed by 16 July and internet service restored before the exam week.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0893",
+    "category": "Complaint/Escalation",
+    "subtopic": "service closure request",
+    "priority": "Low",
+    "description": "i want to close my nova 299 lite plan asap i moved to mumbai and dont need it any more pls confirm closure",
+    "resolution": "Root cause: customer relocation request without pending dues. Steps taken: 1) Verified no outstanding balance on the account 2) Processed service termination effective 24 hours later 3) Sent confirmation email with final closure number. Outcome: Account closed as requested and final confirmation delivered to the customer's email.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0914",
+    "category": "Complaint/Escalation",
+    "subtopic": "compensation request",
+    "priority": "Medium",
+    "description": "got charged extra on my Nova 299 Lite plan for last month, please give me some compensation",
+    "resolution": "Root cause: erroneous surcharge application on the plan. Steps taken: 1) Reviewed the billing cycle and identified the extra ₹250 charge 2) Reversed the amount and issued a ₹250 credit 3) Updated the billing rules to prevent recurrence Outcome: Customer's account was corrected and a credit applied, with assurance of no future errors.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0921",
+    "category": "Complaint/Escalation",
+    "subtopic": "rude agent experience",
+    "priority": "Medium",
+    "description": "I am a senior citizen in Indore and the call centre person was very rude when I asked about my bill; they said \"you should know your own usage\" and hung up, leaving me confused about the extra ₹250 charge.",
+    "resolution": "Root cause: billing inquiry was routed to an untrained agent. Steps taken: 1) reviewed the billing cycle and identified a one-time surcharge for late payment 2) explained the charge in plain language and offered a ₹100 goodwill credit 3) updated the call routing to ensure senior-friendly agents handle similar queries. Outcome: the customer received the credit and a clear statement, restoring confidence in the service.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0938",
+    "category": "Complaint/Escalation",
+    "subtopic": "regulator complaint threat",
+    "priority": "Medium",
+    "description": "My data was throttled after hitting 5 GB on Nova 299 Lite despite the unlimited claim; I will report this to the consumer forum if not fixed promptly.",
+    "resolution": "Root cause: misconfigured data cap rule in billing system. Steps taken: 1) corrected the data cap configuration for unlimited plans 2) refreshed the subscriber profile in real time 3) sent verification of unlimited data status to the customer. Outcome: Unlimited data restored and an apology email sent.",
+    "status": "Resolved"
+  },
+  {
+    "id": "TKT-0950",
+    "category": "Complaint/Escalation",
+    "subtopic": "repeated unresolved issue",
+    "priority": "High",
+    "description": "On 12 Sep my Nova 599 Unlimited line on my Samsung Galaxy A54 kept dropping calls in Pune even after three technician visits, and the issue resurfaced today causing me to miss important client calls.",
+    "resolution": "Root cause: faulty base station antenna configuration affecting handset handover. Steps taken: 1) escalated to network engineering team 2) reprogrammed the affected cell sector parameters 3) forced a device profile refresh on the subscriber's HLR Outcome: call drop rate returned to normal and the subscriber confirmed stable connectivity.",
+    "status": "Resolved"
+  }
+]
